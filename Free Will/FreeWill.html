@@ -2,16 +2,50 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta content="text/html; charset=us-ascii" http-equiv="content-type" />
-    <link href="../Content/bootstrap.css" type="text/css" rel="stylesheet" />
+    <script src="/Scripts/jquery-3.2.1.js" type="text/javascript"></script>
+    <script src="/Scripts/meditations.js" type="text/javascript"></script>
+    <link href="/Content/bootstrap.css" type="text/css" rel="stylesheet" />
     <title></title>
     <style>
         .med-section {
-            width: 650px;
+            max-width: 650px;
+            margin-left: 0;
+            margin-right: 0;
         }
 
         .container-fluid {
+            
+        }
+
+        .med-container-fluid {
             padding-left: 0;
             padding-right: 0;
+        }
+
+
+        @media (min-width: 500px) {
+            .col-sm-4 {
+                width: 33.3%;
+            }
+            .col-sm-5 {
+                width: 41.6%;
+            }
+            .col-sm-6 {
+                width: 50%;
+            }
+            .col-sm-7 {
+                width: 58.3%;
+            }
+            .col-sm-8 {
+                width: 66.6%;
+            }
+            .col-sm-1, .col-sm-2, .col-sm-3, 
+            .col-sm-4, .col-sm-5, .col-sm-6, 
+            .col-sm-7, .col-sm-8, .col-sm-9, 
+            .col-sm-10, .col-sm-11, .col-sm-12 {
+                float: left;
+            }
+
         }
 
         .med-col img {
@@ -27,91 +61,92 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div>
+        <h1>On free will</h1>
+    </div>
+    <div class="container-fluid">
         <div class="med-section row">
-            <h1>
-                On free will
-            </h1>
-            <p>
-                How trustworthy is our intuition? Our common sense?<br />
-                How does common sense compare to that which is not common?<br />
-                To the very fast, to the very slow? To the large and the very small?<br />
-                To very smart and the very dumb?
-            </p>
-            <p>
-                To what we choose, and how we choose?
-            </p>
-        </div>
 
-        <div class="med-section row">
-            <h2>Fate</h2>
-            <p>
-                There was a story about a boy, his name was Oedipus. His
-                father, King Liaus of Thebes, heard a prophecy from an Oracle that his boy was fated to
-                kill his father and marry his mother. Terrified, he left his own child to die in the
-                mountains.<br />
-                But shepherds picked him up and he eventually was raised as the prince of another
-                city.<br />
-                When he came of age, Oedipus heard of his prophecy. Terrified, as he did not want to
-                kill his father and marry his mother, he ran away from the city he was raised in, to
-                Thebes.<br />
-                In his adventures, he encountered his birth-father Liaus and in a quarrel, he killed
-                him.<br />
-                Then he freed Thebes from the threat of a Sphinx, earning the hand of the Queen of
-                Thebes, his mother. Unbeknown to him, all attempts to escape fate wove it.
-            </p>
-            <p>
-                Inevitably, what was to be, became.
-            </p>
-        </div>
-
-        <div class="med-section row">
-            <h2>
-                Determinism
-            </h2>
-            <p>
-                Fate is the precursor to determinism. The idea that one
-                event leads inevitably to another like a chain of dominos, and no matter what we do,
-                we're just along for the ride.
-            </p>
-            <p>
-                The more we learnt about the world, the more it seemed to follow a
-                cause and effect. Physics tells us that if you know the initial conditions, then you
-                know everything that will follow.<br />
-                This is determinism.<br />
-            </p>
-
-            <div class="col-sm-12 med-col">
-                <img alt="https://i.pinimg.com/originals/d9/2c/b9/d92cb9dbd490dc3d76a2ccbab6e4f66a.gif" src="images/image13.gif" title="" />
+            <div>
+                <p>
+                    How trustworthy is our intuition? Our common sense?<br />
+                    How does common sense compare to that which is not common?<br />
+                    To the very fast, to the very slow? To the large and the very small?<br />
+                    To very smart and the very dumb?
+                </p>
+                <p>
+                    To what we choose, and how we choose?
+                </p>
             </div>
 
-            <p>
-                If the laws of physics describe so accurately the world,
-                allowing us to predict the seasons, the stars, the fundamental makings of the cosmos,
-                how can we ever break free from those laws?<br />
-                Do we simply fall into the chain of events, no differently than a rock tumbling down a
-                hill?<br />
-                But then again, why can't science predict our behaviour? Or the weather?<br />
-                Maybe there's things that science can't explain, and maybe that's
-                where free will lies.
-            </p>
-            <p>
-                Maybe determinism and free will could
-                coexist?
-            </p>
-            <p>
-                Maybe science got it wrong and the laws don't
-                work.<br />
-                Things aren't as clockwork, and magic can happen.<br />
-                At least sometimes?
-            </p>
+            <h2>Fate</h2>
+            <div>
+                <p>
+                    There was a story about a boy, his name was Oedipus. His
+                    father, King Liaus of Thebes, heard a prophecy from an Oracle that his boy was fated to
+                    kill his father and marry his mother. Terrified, he left his own child to die in the
+                    mountains.<br />
+                    But shepherds picked him up and he eventually was raised as the prince of another
+                    city.<br />
+                    When he came of age, Oedipus heard of his prophecy. Terrified, as he did not want to
+                    kill his father and marry his mother, he ran away from the city he was raised in, to
+                    Thebes.<br />
+                    In his adventures, he encountered his birth-father Liaus and in a quarrel, he killed
+                    him.<br />
+                    Then he freed Thebes from the threat of a Sphinx, earning the hand of the Queen of
+                    Thebes, his mother. Unbeknown to him, all attempts to escape fate wove it.
+                </p>
+                <p>
+                    Inevitably, what was to be, became.
+                </p>
+            </div>
+
+            <h2>Determinism</h2>
+            <div>
+                <p>
+                    Fate is the precursor to determinism. The idea that one
+                    event leads inevitably to another like a chain of dominos, and no matter what we do,
+                    we're just along for the ride.
+                </p>
+                <p>
+                    The more we learnt about the world, the more it seemed to follow a
+                    cause and effect. Physics tells us that if you know the initial conditions, then you
+                    know everything that will follow.<br />
+                    This is determinism.<br />
+                </p>
+
+
+                <div class="col-sm-12 med-col">
+                    <img alt="https://i.pinimg.com/originals/d9/2c/b9/d92cb9dbd490dc3d76a2ccbab6e4f66a.gif" src="images/image13.gif" title="" />
+                </div>
+
+                <p>
+                    If the laws of physics describe so accurately the world,
+                    allowing us to predict the seasons, the stars, the fundamental makings of the cosmos,
+                    how can we ever break free from those laws?<br />
+                    Do we simply fall into the chain of events, no differently than a rock tumbling down a
+                    hill?<br />
+                    But then again, why can't science predict our behaviour? Or the weather?<br />
+                    Maybe there's things that science can't explain, and maybe that's
+                    where free will lies.
+                </p>
+                <p>
+                    Maybe determinism and free will could
+                    coexist?
+                </p>
+                <p>
+                    Maybe science got it wrong and the laws don't
+                    work.<br />
+                    Things aren't as clockwork, and magic can happen.<br />
+                    At least sometimes?
+                </p>
+
+            </div>
         </div>
 
+        <h1>The Wound of the Human Ego</h1>
         <div class="med-section row">
-            <h1>
-                The Wound of the Human Ego
-            </h1>
-            <div class="container-fluid">
+            <div class="container-fluid med-container-fluid">
                 <div class="col-sm-7 med-col">
                     <p>
                         In the beginning, there was nothing but me. Or you.<br />
@@ -154,7 +189,7 @@
                 <a href="https://en.wikipedia.org/wiki/Uluru">Uluru</a>
                 ?
             </p>
-            <div class="container-fluid">
+            <div class="container-fluid med-container-fluid">
                 <div class="col-sm-6 med-col">
                     <img alt="" src="images/image9.jpg" title="" />
                 </div>
@@ -174,7 +209,7 @@
                 <a href="https://en.wikipedia.org/wiki/Thales_of_Miletus">rain was not from the gods</a>.
 
             </p>
-            <div class="container-fluid">
+            <div class="container-fluid med-container-fluid">
                 <div class="col-sm-4 med-col">
                     <img alt="" src="images/image15.jpg" title="" />
                 </div>
@@ -192,8 +227,7 @@
                 </div>
             </div>
 
-
-            <div class="container-fluid">
+            <div class="container-fluid med-container-fluid">
                 <div class="col-sm-6 med-col">
                     <p>
                         <a href="https://en.wikipedia.org/wiki/Nicolaus_Copernicus">Copernicus</a>
@@ -217,7 +251,6 @@
                     <img alt="" src="images/image10.jpg" title="" />
                 </div>
             </div>
-
 
             <p>
                 Newton started predicting with unparalleled precision
@@ -262,7 +295,7 @@
                 , and we have more in common with mushrooms
                 still.
             </p>
-            <div class="container-fluid">
+            <div class="container-fluid med-container-fluid">
                 <div class="col-sm-6 med-col">
                     <img alt="" src="images/image3.jpg" title="" />
                 </div>
@@ -292,7 +325,7 @@
                 own.
 
             </p>
-            <div class="container-fluid">
+            <div class="container-fluid med-container-fluid">
                 <div class="col-sm-6 med-col">
                     <img alt="pale-blue-dot.jpg" src="images/image11.jpg" title="" />
                 </div>
@@ -309,7 +342,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid">
+            <div class="container-fluid med-container-fluid">
                 <div class="col-sm-6 med-col">
                     <p>
                         If there were 10 billion people on earth, we'd
@@ -345,10 +378,8 @@
             </p>
         </div>
 
+        <h1>Your Free Will</h1>
         <div class="med-section row">
-            <h1>
-                Your Free Will
-            </h1>
             <p>
                 So what is "Free Will "?
             </p>
@@ -362,183 +393,188 @@
                 can never agree on the definitions.<br />
                 So while we may disagree, let me show what to disagree on.
             </p>
-            <h2>
-                Will
-            </h2>
-            <p>
-                If "Will "is what results in actions, what
-                has "Will "? If we assign "Will "only to humans, we fall prey to
-                anthropocentrism. Some would assign "Will "to most animals, so maybe as far
-                as dogs, cats.<br />
-                But ants?
-            </p>
-            <p>
-                How about cockroaches? We've figured out how to
-                <a href="http://www.dailymail.co.uk/sciencetech/article-2980828/The-cyborg-cockroaches-fitted-mind-control-device-used-explore-disaster-zones.html">turn them left and right</a>
-                at least most of the
-                times.
-            </p>
-            <p>
-                In nature, there's rarely clear lines, everything
-                exists in a continuum.
-            </p>
-            <p>
-                A cockroach has around 1 million neurons, whereas humans
-                around 100'000 million neurons. But elephants have about three times that.<br />
-                On the other hand, some worms have about 300 of them.<br />
-                Do they have will, when they are over a thousand times simpler than our
-                remote-controlled cockroaches?
-            </p>
-            <p>
-                How many neurons does it take to will?
-            </p>
+
+            <h2>Will</h2>
+            <div>
+                <p>
+                    If "Will "is what results in actions, what
+                    has "Will "? If we assign "Will "only to humans, we fall prey to
+                    anthropocentrism. Some would assign "Will "to most animals, so maybe as far
+                    as dogs, cats.<br />
+                    But ants?
+                </p>
+                <p>
+                    How about cockroaches? We've figured out how to
+                    <a href="http://www.dailymail.co.uk/sciencetech/article-2980828/The-cyborg-cockroaches-fitted-mind-control-device-used-explore-disaster-zones.html">turn them left and right</a>
+                    at least most of the
+                    times.
+                </p>
+                <p>
+                    In nature, there's rarely clear lines, everything
+                    exists in a continuum.
+                </p>
+                <p>
+                    A cockroach has around 1 million neurons, whereas humans
+                    around 100'000 million neurons. But elephants have about three times that.<br />
+                    On the other hand, some worms have about 300 of them.<br />
+                    Do they have will, when they are over a thousand times simpler than our
+                    remote-controlled cockroaches?
+                </p>
+                <p>
+                    How many neurons does it take to will?
+                </p>
+            </div>
+
             <h2>Free</h2>
-            <p>
-                Then there's "Free". "Free" from what?<br />
-                Coercion also exists in a spectrum.
-            </p>
-            <p>
-                Suppose a person has been raised all their lives to
-                believe one way or act one way, there's hardly any possibility they won't
-                act in some particular way, or at least it makes some of their actions very
-                predictable. Were they coerced? Brainwashed?<br />
-                Maybe I tell a child he absolutely needs to write with his right hand, because the left
-                hand is that of some evil deceiver. And he was a lefty. But to his dying age, he never
-                wrote with his left hand.
-            </p>
-            <p>
-                What if I just convince you
-                through some reward, say salary, or the threat of a mild punishment, say a spanking. Is
-                that coercion or convincing? Is the spanking a threat or a reward?<br />
-                Are you just a kinky individual?
-                <a href="http://www.humanillnesses.com/Behavioral-Health-Fe-Mu/Genetics-and-Behavior.html">Is kinkiness genetic</a>?
-            </p>
-            <p>
-                What if I just insist a lot? <a href="https://www.youtube.com/watch?v%3D9RRhhewFqyw">Is 50 no's and 1 yes, still a yes</a>?<br />
-            </p>
-            <div class="container-fluid">
-                <div class="col-sm-6 med-col">
-                    <img alt="ad9V90N_700b.jpg" src="images/image18.jpg" title="" />
+            <div>
+                <p>
+                    Then there's "Free". "Free" from what?<br />
+                    Coercion also exists in a spectrum.
+                </p>
+                <p>
+                    Suppose a person has been raised all their lives to
+                    believe one way or act one way, there's hardly any possibility they won't
+                    act in some particular way, or at least it makes some of their actions very
+                    predictable. Were they coerced? Brainwashed?<br />
+                    Maybe I tell a child he absolutely needs to write with his right hand, because the left
+                    hand is that of some evil deceiver. And he was a lefty. But to his dying age, he never
+                    wrote with his left hand.
+                </p>
+                <p>
+                    What if I just convince you
+                    through some reward, say salary, or the threat of a mild punishment, say a spanking. Is
+                    that coercion or convincing? Is the spanking a threat or a reward?<br />
+                    Are you just a kinky individual?
+                    <a href="http://www.humanillnesses.com/Behavioral-Health-Fe-Mu/Genetics-and-Behavior.html">Is kinkiness genetic</a>?
+                </p>
+                <p>
+                    What if I just insist a lot? <a href="https://www.youtube.com/watch?v%3D9RRhhewFqyw">Is 50 no's and 1 yes, still a yes</a>?<br />
+                </p>
+                <div class="container-fluid med-container-fluid">
+                    <div class="col-sm-6 med-col">
+                        <img alt="ad9V90N_700b.jpg" src="images/image18.jpg" title="" />
+                    </div>
+                    <div class="col-sm-6 med-col">
+                        <p>
+                            If I hold a gun to your head, and ask you to dig your own grave, you could say
+                            that's coercion &hellip;But you could technically refuse. You could exert your
+                            ultimate radical freedom and do nothing, preferring death over
+                            bending the knee.
+                        </p>
+                        <p>
+                            In short, unless I physically insert cathodes to your
+                            brain and make you think some way, it's not clear where coercion starts &hellip;But technically, I don't have to, we have other techniques of brainwashing and
+                            hypnosis to make you do things.
+                        </p>
+                        <p>
+                            There's a case of a <a href="http://www.independent.co.uk/life-style/health-and-families/features/a-40-year-old-developed-an-obsession-with-child-pornography-then-doctors-discovered-why-a6893756.html">man who became pedophillic due to a brain tumor</a>.<br />
+                            There's a case of a man who's <a href="https://en.wikipedia.org/wiki/Phineas_Gage">craneal accident changed his personality completely</a>.<br />
+                        </p>
+                    </div>
                 </div>
-                <div class="col-sm-6 med-col">
-                    <p>
-                        If I hold a gun to your head, and ask you to dig your own grave, you could say
-                        that's coercion &hellip;But you could technically refuse. You could exert your
-                        ultimate radical freedom and do nothing, preferring death over
-                        bending the knee.
-                    </p>
-                    <p>
-                        In short, unless I physically insert cathodes to your
-                        brain and make you think some way, it's not clear where coercion starts &hellip;But technically, I don't have to, we have other techniques of brainwashing and
-                        hypnosis to make you do things.
-                    </p>
-                    <p>
-                        There's a case of a <a href="http://www.independent.co.uk/life-style/health-and-families/features/a-40-year-old-developed-an-obsession-with-child-pornography-then-doctors-discovered-why-a6893756.html">man who became pedophillic due to a brain tumor</a>.<br />
-                        There's a case of a man who's <a href="https://en.wikipedia.org/wiki/Phineas_Gage">craneal accident changed his personality completely</a>.<br />
-                    </p>
-                </div>
+                <br />
+                <p>
+                    And even a mild drug such as <a href="https://www.theatlantic.com/health/archive/2013/04/whats-tylenol-doing-to-our-minds/275101/">Tylenol can affect our decision making</a>.<br />
+                    There's a case of a <a href="http://www.independent.co.uk/life-style/health-and-families/features/a-40-year-old-developed-an-obsession-with-child-pornography-then-doctors-discovered-why-a6893756.html">man who became pedophillic due to a brain tumor</a>.<br />
+                    There's a case of a man who's <a href="https://en.wikipedia.org/wiki/Phineas_Gage">craneal accident changed his personality completely</a>.<br />
+                    And even a mild drug such as <a href="https://www.theatlantic.com/health/archive/2013/04/whats-tylenol-doing-to-our-minds/275101/">Tylenol can affect our decision making</a>.<br />
+                    That's why anti-depressants work in the first place.<br />
+                    What about hormones? Brain injury? Psychoactive drugs? Memory manipulation?<br />
+                    I mean, it's not like something like half of humans experience weird mood swings
+                    by no fault of their own due to some silly hormones, that would be ludicrous!
+                </p>
+                <p>
+                    The number of ways our brain can be manipulated is
+                    outstanding &hellip;
+                </p>
+                <p>
+                    And
+                    if
+                    everything is constrained to the laws of physics, then the only thing that
+                    we can be from would be these laws, then we're bound to these laws, we are not
+                    that much different than rocks rolling down a rocky hill. We're physical things
+                    simply reacting as the laws permit.
+                </p>
+                <p>
+                    In other words, if we are not free from the chain of
+                    causation, the dominoes from the beginning to the end, if we can't pick whether
+                    or not to obey the laws of physics, there's no freedom to be had.
+                </p>
+                <p>
+                    If we're not free from causation, we are not free,
+                    because it's the only thing to be free from.
+                </p>
+                <p>
+                    On the other hand, we seemingly cannot chose to make a
+                    decision because that's still a decision in of itself.
+                </p>
             </div>
-            <br />
-            <p>
-                And even a mild drug such as <a href="https://www.theatlantic.com/health/archive/2013/04/whats-tylenol-doing-to-our-minds/275101/">Tylenol can affect our decision making</a>.<br />
-                There's a case of a <a href="http://www.independent.co.uk/life-style/health-and-families/features/a-40-year-old-developed-an-obsession-with-child-pornography-then-doctors-discovered-why-a6893756.html">man who became pedophillic due to a brain tumor</a>.<br />
-                There's a case of a man who's <a href="https://en.wikipedia.org/wiki/Phineas_Gage">craneal accident changed his personality completely</a>.<br />
-                And even a mild drug such as <a href="https://www.theatlantic.com/health/archive/2013/04/whats-tylenol-doing-to-our-minds/275101/">Tylenol can affect our decision making</a>.<br />
-                That's why anti-depressants work in the first place.<br />
-                What about hormones? Brain injury? Psychoactive drugs? Memory manipulation?<br />
-                I mean, it's not like something like half of humans experience weird mood swings
-                by no fault of their own due to some silly hormones, that would be ludicrous!
-            </p>
-            <p>
-                The number of ways our brain can be manipulated is
-                outstanding &hellip;
-            </p>
-            <p>
-                And
-                if
-                everything is constrained to the laws of physics, then the only thing that
-                we can be from would be these laws, then we're bound to these laws, we are not
-                that much different than rocks rolling down a rocky hill. We're physical things
-                simply reacting as the laws permit.
-            </p>
-            <p>
-                In other words, if we are not free from the chain of
-                causation, the dominoes from the beginning to the end, if we can't pick whether
-                or not to obey the laws of physics, there's no freedom to be had.
-            </p>
-            <p>
-                If we're not free from causation, we are not free,
-                because it's the only thing to be free from.
-            </p>
-            <p>
-                On the other hand, we seemingly cannot chose to make a
-                decision because that's still a decision in of itself.
-            </p>
-            <h2>
-                You (the Agent)
-            </h2>
-            <div class="container-fluid">
-                <div class="col-sm-6 med-col">
-                    <p>
-                        <img alt="2179159-agent_smith.jpg" src="images/image5.jpg" title="" />
-                    </p>
+
+            <h2>You (the Agent)</h2>
+            <div>
+                <div class="container-fluid med-container-fluid">
+                    <div class="col-sm-6 med-col">
+                        <p>
+                            <img alt="2179159-agent_smith.jpg" src="images/image5.jpg" title="" />
+                        </p>
+                    </div>
+                    <div class="col-sm-6 med-col">
+                        <p>
+                            Then there's "You ". This related to
+                            identity.
+                        </p>
+                        <p>
+                            Who are you? Your body? Your mind? Your soul? Your brain?<br />
+                            What if I <a href="https://en.wikipedia.org/wiki/Split-brain">split your brain in two</a>,
+                            causing you to have two different brains, with differing opinions in your own head?
+                        </p>
+                        <p>
+                            One <a href="https://www.youtube.com/watch?v%3DPFJPtVRlI64">half being an atheist, the other one not</a>?<br />
+                            What if you have three or four personalities in your head?<br />
+                            Who is the "you "making the choosing, if every choice ultimately alters who
+                            "you "are?<br />
+                            What if like the
+                            <a href="https://en.wikipedia.org/wiki/Ship_of_Theseus">Ship of Thessus</a>,
+                            you change so much that none of your old you remains?<br />
+                            Are you to be blamed for actions that your old self once committed?<br />
+                        </p>
+                    </div>
                 </div>
-                <div class="col-sm-6 med-col">
-                    <p>
-                        Then there's "You ". This related to
-                        identity.
-                    </p>
-                    <p>
-                        Who are you? Your body? Your mind? Your soul? Your brain?<br />
-                        What if I <a href="https://en.wikipedia.org/wiki/Split-brain">split your brain in two</a>,
-                        causing you to have two different brains, with differing opinions in your own head?
-                    </p>
-                    <p>
-                        One <a href="https://www.youtube.com/watch?v%3DPFJPtVRlI64">half being an atheist, the other one not</a>?<br />
-                        What if you have three or four personalities in your head?<br />
-                        Who is the "you "making the choosing, if every choice ultimately alters who
-                        "you "are?<br />
-                        What if like the
-                        <a href="https://en.wikipedia.org/wiki/Ship_of_Theseus">Ship of Thessus</a>,
-                        you change so much that none of your old you remains?<br />
-                        Are you to be blamed for actions that your old self once committed?<br />
-                    </p>
-                </div>
+                <a href="https://www.youtube.com/watch?v%3DCWQYVYvoqDA">A person you can't even recognize</a>?
+                <br />
+                What about the self
+                <a href="https://www.youtube.com/watch?v%3DpVZ4k2fbK2Q">you will one day be</a>?
+                <p>
+                    What if you, suffering from dual personality disorder
+                    find yourself stuck in a situation, that your other self put you in? What choice did
+                    you have in that?
+                </p>
+                <p>
+                    What if you're under the influence of
+                    mind-altering substances, or things that change your decision making?<br />
+                    As it was once said:
+                </p>
+                <p>
+                    "No man steps into the same river twice, for it is not
+                    the same river, and it is not the same man."
+                </p>
+                <p>
+                    Who are you? How many are you? What is you?
+                </p>
             </div>
-            <a href="https://www.youtube.com/watch?v%3DCWQYVYvoqDA">A person you can't even recognize</a>?
-            <br />
-            What about the self
-            <a href="https://www.youtube.com/watch?v%3DpVZ4k2fbK2Q">you will one day be</a>?
-            <p>
-                What if you, suffering from dual personality disorder
-                find yourself stuck in a situation, that your other self put you in? What choice did
-                you have in that?
-            </p>
-            <p>
-                What if you're under the influence of
-                mind-altering substances, or things that change your decision making?<br />
-                As it was once said:
-            </p>
-            <p>
-                "No man steps into the same river twice, for it is not
-                the same river, and it is not the same man."
-            </p>
-            <p>
-                Who are you? How many are you? What is you?
-            </p>
+
         </div>
 
+        <h1>Determinism vs Predictability</h1>
         <div class="med-section row">
-            <h1>
-                Determinism vs Predictability
-            </h1>
+
             <p>
                 It is often argued that if it were the case that if
                 we're fully determined, we should all behave roughly the same way, and we should
                 all be at least in principle very predictable.
             </p>
 
-            <div class="container-fluid">
+            <div class="container-fluid med-container-fluid">
                 <div class="col-sm-5 med-col">
                     <p>
                         But physics does not predict predictability.<br />
@@ -555,11 +591,11 @@
                     </p>
                 </div>
                 <div class="col-sm-7 med-col" style="height: 240px;overflow: hidden;">
-                    <img alt="chaos.gif" src="images/image2.gif" title="" style="margin-top: -28px;">
+                    <img alt="chaos.gif" src="images/image2.gif" title="" style="margin-top: -28px;" />
                 </div>
             </div>
 
-            <div class="container-fluid">
+            <div class="container-fluid med-container-fluid">
                 <div class="col-sm-6 med-col">
                     <img alt="https://upload.wikimedia.org/wikipedia/commons/7/77/DPLE.jpg" src="images/image16.jpg" title="" />
                 </div>
@@ -590,10 +626,9 @@
             </p>
         </div>
 
+        <h1>Omniscience vs Determinism</h1>
         <div class="med-section row">
-            <h1>
-                Omniscience vs Determinism
-            </h1>
+
             <p>
                 An omniscient being, that knows every decision
                 you'll ever make, like a bearded man in the sky or something, would be a strong
@@ -631,12 +666,8 @@
             </p>
         </div>
 
+        <h1>Artificial Intelligence vs Free Will</h1>
         <div class="med-section row">
-            <h1>
-                Artificial Intelligence vs Free
-                Will
-            </h1>
-            <p></p>
             <p>
                 Do planes fly? Think about it, what does it mean to fly
                 exactly?<br />
@@ -654,8 +685,7 @@
                 <a href="https://qz.com/637961/what-everyone-is-getting-wrong-about-googles-ai-victory/">
                     Alpha Go beat the world champion of a game that makes chess looks like
                     tic-tac-toe
-                </a>
-                .
+                </a>.
             </p>
             <p>
                 Or when <a href="https://www.youtube.com/watch?v%3DjAu1ZsTCA64">OpenAI beat arguably the best DOTA player</a>.
@@ -693,7 +723,7 @@
                 question whether a machine is capable of will, and whether that will is free.<br />
             </p>
 
-            <div class="container-fluid">
+            <div class="container-fluid med-container-fluid">
                 <div class="col-sm-6 med-col">
                     <img alt="" src="images/image8.png" title="" />
                 </div>
@@ -726,10 +756,9 @@
             </p>
         </div>
 
+        <h1>What People Think</h1>
         <div class="med-section row">
-            <h1>
-                What People Think
-            </h1>
+
             <p>
                 People a wide range of opinions on the matter, and this
                 topic pulls, as quickly discussed, on all corners of ideas, from science, religion,
@@ -750,7 +779,7 @@
                 some believe in one of four big choices.
             </p>
             <p>
-                <div class="container-fluid">
+                <div class="container-fluid med-container-fluid">
                     <div class="col-sm-16 med-col">
                         <img alt="File:DeterminismXFreeWill.svg" src="images/image14.png" title="" />
                         <div>Fig. a: Some cute image on the web on different stances</div>
@@ -758,184 +787,185 @@
                 </div>
                 <br />
             </p>
-            <h2>
-                Hard Determinism
-            </h2>
-            <p>
-                Determinism is true (spoilers, it <a href="https://en.wikipedia.org/wiki/Quantum_mechanics">isn't</a>),
-                and so all of our actions are determined,
-                actually pre-determined since the beginning of time.<br />
-                There's no free will, we're dominoes riding the passage of events.<br />
-                You had no choice but to take the bus this morning because you were going to do that
-                silly job at the super-market from the moment you were born into that ill-fortunate
-                middle-class family that can't afford to pay for your schooling. Sure, you could
-                have stuck to trade-school and be done, but you were ambitious. You were always
-                ambitious. You were born ambitious, which was nurtured by the fire in your
-                mother's heart and the charisma of your father, the thatcher who taught you you
-                could change your stars.
-            </p>
-            <h2>
-                Soft Determinism
-                (Compatibilism)
-            </h2>
-            <p>
-                So what if everything was already decided? You are your will. The
-                thing that makes you "you ", made the decision and no one forced you to take
-                that bus. No one put a gun to your head and coerced you.<br />
-                You are the
-                <a href="#h.7rjzjfg1lou">agent</a>
-                of your will, if you are free to do
-                as you will.<br />
-                You took the bus because you chose. And that's what matters!
-            </p>
-            <h2>
-                Libertarianism
-            </h2>
-            <p>
-                Science can't even predict if it's going to
-                rain tomorrow. It's a useful tool for doing some stuff, like creating a computer
-                in which we run sophisticated physics simulations, but it's limited.<br />
-                Hell, science can't even get quantum physics right, and quantum physics predicts
-                the world is not deterministic. Random shit can happen, including us making
-                decisions.Sure, you might not chose how tall you'll be, but you definitely can
-                chose what you do.
-            </p>
-            <p>
-                But at a core, we are free. More or less free depending
-                on say, how drunk we are, or how we were raised, but for the most part, we can create
-                our own chain of events.
-            </p>
-            <p>
-                Sure, if the world was deterministic, we'd have no
-                free will, but since we have free will (as it seems we do) then determinism is
-                false!
-            </p>
-            <p>
-                We are not only dominoes, we are <a href="https://www.youtube.com/watch?v%3DQ0jeohWnmAQ">domino-chain makers</a>, not just observers.
-            </p>
-            <p>
-                We weave our own fate, forge our own destiny!
-            </p>
-            <h2>
-                Hard Incompatibilism
-            </h2>
-            <p>
-                If the bus does not show up, can you chose to take the
-                bus? What if the bus both shows up and doesn't?<br />
-                Can you both chose to take the bus or walk, as the bus shows up, or
-                doesn't?
-            </p>
-            <p>
-                There's too much to be said about the
-                indeterministic nature of the world, but we don't have the time (or chose not
-                to?).
-            </p>
-            <p>
-                Simply put, very very tiny things behave
-                probabilistically. There's a thing that's most likely to happen, but it
-                might not. Something else might happen.<br />
-                The best we can do is predict the odds of an event happening.
-            </p>
-            <p>
-                Now, at this point, some people argue ardently one
-                of two things:
-            </p>
-            <ul>
-                <li>
-                    There it is! Our free will. A quantum
-                    consciousness capable of transcending the simple laws of physics.
-                </li>
-                <li>
-                    <a href="http://www.businessinsider.com/god-does-not-play-dice-quote-meaning-2015-11">God does not play with dice</a>.
-                    Things aren't just probabilistic or random. Science simply does not understand the deeper underlying
-                    hidden laws. Things are still deterministic in some higher level.
-                </li>
-            </ul>
-            <p>
-                The first one leads us back to Libertarianism, and the
-                second one back to Determinism.
-            </p>
-            <p>
-                Let's talk about the first point,
-                indeterminism.
-            </p>
-            <div class="container-fluid">
-                <div class="col-sm-5 med-col">
-                    <p>
-                        Sigh&hellip; Here we hit the limits of human understanding (and mine).<br />
-                        To start with the first, quantum mechanics remains probabilistic, which means 90% of
-                        the time or more it will land exactly where you expect it to land. So we can at most be
-                        expected to be some percentage free.<br />
-                        And that's assuming that quantum physics actually impacts our "consciousness ".
-                        We can explain a vast amount of phenomena in the world
-                        without invoking the probabilistic quantum nature.
-                    </p>
-                </div>
-                <div class="col-sm-7 med-col">
-                    <img alt="g6gy925.jpg" src="images/image7.jpg" title="" />
-                </div>
+
+            <h2>Hard Determinism</h2>
+            <div>
+                <p>
+                    Determinism is true (spoilers, it <a href="https://en.wikipedia.org/wiki/Quantum_mechanics">isn't</a>),
+                    and so all of our actions are determined,
+                    actually pre-determined since the beginning of time.<br />
+                    There's no free will, we're dominoes riding the passage of events.<br />
+                    You had no choice but to take the bus this morning because you were going to do that
+                    silly job at the super-market from the moment you were born into that ill-fortunate
+                    middle-class family that can't afford to pay for your schooling. Sure, you could
+                    have stuck to trade-school and be done, but you were ambitious. You were always
+                    ambitious. You were born ambitious, which was nurtured by the fire in your
+                    mother's heart and the charisma of your father, the thatcher who taught you you
+                    could change your stars.
+                </p>
             </div>
-            <p>
-                It's only when we make
-                <a href="https://www.theverge.com/circuitbreaker/2016/10/6/13187820/one-nanometer-transistor-berkeley-lab-moores-law">transistors so small</a>
-                that quantum tunneling becomes a problem, or when we make
-                <a href="https://en.wikipedia.org/wiki/Double-slit_experiment">two tiny slits and send individual particles into it</a>.
-                While our brains have lots of small cells, they're not nearly small enough for quantum
-                weirdness to kick in.<br />
-                So even if indeterminism gives us the opportunity to create causal chains, we probably don't.<br />
-                But suppose we do. Suppose 10% of the decisions you make, at random, you instead roll a
-                dice, and based on the outcome, you do something.
-            </p>
-            <p>
-                You make a table with choices, roll a dice, and based on
-                the number, you do the choice in the row the dice rolled.
-            </p>
-            <p>
-                And then you say, "Behold! My freedom!"&hellip;<br />
-            </p>
-            <div class="container-fluid">
-                <div class="col-sm-4 med-col">
-                    <img alt="clap.gif" src="images/image17.gif" title="" />
-                </div>
-                <div class="col-sm-8 med-col">
-                    <p>
-                        Then you remember the same happens to tape-worms. And
-                        actually sub-atomic particles in your coffee.<br />
-                        So while coffee might not be considered an "agent "or have
-                        "will ", it has the same kind of "freedom "you're invoking
-                        to be "free ". And the tape-worm has it all.
-                    </p>
-                    <p>
-                        Hell, a <a href="http://aip.scitation.org/doi/10.1063/1.3597793">quantum random number generator</a>
-                        does just the trick, I'll lend it to you at the next fork in the road you cross.
-                    </p>
-                </div>
+
+            <h2>Soft Determinism (Compatibilism)</h2>
+            <div>
+                <p>
+                    So what if everything was already decided? You are your will. The
+                    thing that makes you "you ", made the decision and no one forced you to take
+                    that bus. No one put a gun to your head and coerced you.<br />
+                    You are the
+                    <a href="#h.7rjzjfg1lou">agent</a>
+                    of your will, if you are free to do
+                    as you will.<br />
+                    You took the bus because you chose. And that's what matters!
+                </p>
             </div>
-            <p>
-                That is to say, you'd have to consider a dice-roll
-                (on some small percent of the decisions you make) to be your free will, assume that
-                percentage is even significant, and assume that there's indeed a dice-roll in the
-                first place. And worms do it too.
-            </p>
-            <p>
-                Now back the second point, it simply says determinism is still
-                true, we're just too stupid to get it.<br />
-                We don't yet understand the "hidden causes "behind the
-                dice-roll-looking behaviour.<br />
-                Einstein spent the latter part of his life defying quantum physics... He never came to
-                terms with the fact that reality is inherently random and probabilistic.<br />
-                The idea that there's something else determining things, and we just don't know it yet is the idea of
-                <a href="https://en.wikipedia.org/wiki/Hidden_variable_theory">Hidden Variable Theory</a>.<br />
-                Since it doesn't change of free will discussion, we'll just leave that
-                little nugget for the sake of completeness and as an exercise for the reader.<br />
-                Remember, quantum physics is still around, but Einstein isn't.
-            </p>
+
+            <h2>Libertarianism</h2>
+            <div>
+                <p>
+                    Science can't even predict if it's going to
+                    rain tomorrow. It's a useful tool for doing some stuff, like creating a computer
+                    in which we run sophisticated physics simulations, but it's limited.<br />
+                    Hell, science can't even get quantum physics right, and quantum physics predicts
+                    the world is not deterministic. Random shit can happen, including us making
+                    decisions.Sure, you might not chose how tall you'll be, but you definitely can
+                    chose what you do.
+                </p>
+                <p>
+                    But at a core, we are free. More or less free depending
+                    on say, how drunk we are, or how we were raised, but for the most part, we can create
+                    our own chain of events.
+                </p>
+                <p>
+                    Sure, if the world was deterministic, we'd have no
+                    free will, but since we have free will (as it seems we do) then determinism is
+                    false!
+                </p>
+                <p>
+                    We are not only dominoes, we are <a href="https://www.youtube.com/watch?v%3DQ0jeohWnmAQ">domino-chain makers</a>, not just observers.
+                </p>
+                <p>
+                    We weave our own fate, forge our own destiny!
+                </p>
+            </div>
+
+            <h2>Hard Incompatibilism</h2>
+            <div>
+                <p>
+                    If the bus does not show up, can you chose to take the
+                    bus? What if the bus both shows up and doesn't?<br />
+                    Can you both chose to take the bus or walk, as the bus shows up, or
+                    doesn't?
+                </p>
+                <p>
+                    There's too much to be said about the
+                    indeterministic nature of the world, but we don't have the time (or chose not
+                    to?).
+                </p>
+                <p>
+                    Simply put, very very tiny things behave
+                    probabilistically. There's a thing that's most likely to happen, but it
+                    might not. Something else might happen.<br />
+                    The best we can do is predict the odds of an event happening.
+                </p>
+                <p>
+                    Now, at this point, some people argue ardently one
+                    of two things:
+                </p>
+                <ul>
+                    <li>
+                        There it is! Our free will. A quantum
+                        consciousness capable of transcending the simple laws of physics.
+                    </li>
+                    <li>
+                        <a href="http://www.businessinsider.com/god-does-not-play-dice-quote-meaning-2015-11">God does not play with dice</a>.
+                        Things aren't just probabilistic or random. Science simply does not understand the deeper underlying
+                        hidden laws. Things are still deterministic in some higher level.
+                    </li>
+                </ul>
+                <p>
+                    The first one leads us back to Libertarianism, and the
+                    second one back to Determinism.
+                </p>
+                <p>
+                    Let's talk about the first point,
+                    indeterminism.
+                </p>
+                <div class="container-fluid med-container-fluid">
+                    <div class="col-sm-5 med-col">
+                        <p>
+                            Sigh&hellip; Here we hit the limits of human understanding (and mine).<br />
+                            To start with the first, quantum mechanics remains probabilistic, which means 90% of
+                            the time or more it will land exactly where you expect it to land. So we can at most be
+                            expected to be some percentage free.<br />
+                            And that's assuming that quantum physics actually impacts our "consciousness ".
+                            We can explain a vast amount of phenomena in the world
+                            without invoking the probabilistic quantum nature.
+                        </p>
+                    </div>
+                    <div class="col-sm-7 med-col">
+                        <img alt="g6gy925.jpg" src="images/image7.jpg" title="" />
+                    </div>
+                </div>
+                <p>
+                    It's only when we make
+                    <a href="https://www.theverge.com/circuitbreaker/2016/10/6/13187820/one-nanometer-transistor-berkeley-lab-moores-law">transistors so small</a>
+                    that quantum tunneling becomes a problem, or when we make
+                    <a href="https://en.wikipedia.org/wiki/Double-slit_experiment">two tiny slits and send individual particles into it</a>.
+                    While our brains have lots of small cells, they're not nearly small enough for quantum
+                    weirdness to kick in.<br />
+                    So even if indeterminism gives us the opportunity to create causal chains, we probably don't.<br />
+                    But suppose we do. Suppose 10% of the decisions you make, at random, you instead roll a
+                    dice, and based on the outcome, you do something.
+                </p>
+                <p>
+                    You make a table with choices, roll a dice, and based on
+                    the number, you do the choice in the row the dice rolled.
+                </p>
+                <p>
+                    And then you say, "Behold! My freedom!"&hellip;<br />
+                </p>
+                <div class="container-fluid med-container-fluid">
+                    <div class="col-sm-4 med-col">
+                        <img alt="clap.gif" src="images/image17.gif" title="" />
+                    </div>
+                    <div class="col-sm-8 med-col">
+                        <p>
+                            Then you remember the same happens to tape-worms. And
+                            actually sub-atomic particles in your coffee.<br />
+                            So while coffee might not be considered an "agent "or have
+                            "will ", it has the same kind of "freedom "you're invoking
+                            to be "free ". And the tape-worm has it all.
+                        </p>
+                        <p>
+                            Hell, a <a href="http://aip.scitation.org/doi/10.1063/1.3597793">quantum random number generator</a>
+                            does just the trick, I'll lend it to you at the next fork in the road you cross.
+                        </p>
+                    </div>
+                </div>
+                <p>
+                    That is to say, you'd have to consider a dice-roll
+                    (on some small percent of the decisions you make) to be your free will, assume that
+                    percentage is even significant, and assume that there's indeed a dice-roll in the
+                    first place. And worms do it too.
+                </p>
+                <p>
+                    Now back the second point, it simply says determinism is still
+                    true, we're just too stupid to get it.<br />
+                    We don't yet understand the "hidden causes "behind the
+                    dice-roll-looking behaviour.<br />
+                    Einstein spent the latter part of his life defying quantum physics... He never came to
+                    terms with the fact that reality is inherently random and probabilistic.<br />
+                    The idea that there's something else determining things, and we just don't know it yet is the idea of
+                    <a href="https://en.wikipedia.org/wiki/Hidden_variable_theory">Hidden Variable Theory</a>.<br />
+                    Since it doesn't change of free will discussion, we'll just leave that
+                    little nugget for the sake of completeness and as an exercise for the reader.<br />
+                    Remember, quantum physics is still around, but Einstein isn't.
+                </p>
+            </div>
         </div>
 
+        <h1>What I Think</h1>
         <div class="med-section row">
-            <h1>
-                What I Think
-            </h1>
             <p>
                 Thanks for asking.<br />
                 It appears to me, as stated not too subtly in this totally impartial piece, that we
@@ -950,312 +980,318 @@
             <p>
                 We keep looking for answers, and find none...
             </p>
-            <h2>
-                The Question
-            </h2>
-            <p>
-                So, instead of collecting answers, let's <a href="http://kiriakakis.net/comics/mused/a-day-at-the-park">collect questions</a>:
-            </p>
-            <ul>
-                <li>
-                    What's capable of Will? Humans? Dogs? Ants?
-                    Bacteria? Mitochondria? Viruses? Prions?
-                </li>
-                <li>
-                    <ul>
-                        <li>
-                            Where do you draw the line, and why?
-                        </li>
-                        <li>
-                            If you draw it at humans, when did humans acquire will?
-                            At Homo Sapiens? Homo sensorium? Homo Erectus? Australopithecus?
-                        </li>
-                        <li>
-                            <ul>
-                                <li>
-                                    Where do you draw that line and why?
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    Are only living beings capable of Will?
-                </li>
-                <li>
-                    <ul>
-                        <li>
-                            What is a
-                            <a href="https://en.wikibooks.org/wiki/Cell_Biology/Introduction/What_is_living">living being</a>
-                            ? Are viruses technically alive? How about
-                            computer parasites
-                            that exhibit more
-                            characteristics of being alive than viruses? Why are viruses not considered living?
-                            Why aren't computer parasites?
-                        </li>
-                        <li>
-                            Why are living beings so special that they should have this
-                            thing Will and some less living but
-                            <a href="http://theconversation.com/six-mysteries-of-jupiters-great-red-spot-80829">equally awesome and dynamic phenomena do not</a>
-                            ?
-                        </li>
-                    </ul>
-                </li>
-            </ul>
 
-            <ul>
-                <li>
-                    What does it mean to be free? Free from what?
-                </li>
-                <li>
-                    <ul>
-                        <li>
-                            Is freedom from causation required for free
-                            will?
-                        </li>
-                        <li>
-                            Is coercion a black or white matter?
-                        </li>
-                        <li>
-                            Where does radical freedom come in? Do we not
-                            always have a choice?
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+            <h2>The Question</h2>
+            <div>
+                <p>
+                    So, instead of collecting answers, let's <a href="http://kiriakakis.net/comics/mused/a-day-at-the-park">collect questions</a>:
+                </p>
+                <ul>
+                    <li>
+                        What's capable of Will? Humans? Dogs? Ants?
+                        Bacteria? Mitochondria? Viruses? Prions?
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                Where do you draw the line, and why?
+                            </li>
+                            <li>
+                                If you draw it at humans, when did humans acquire will?
+                                At Homo Sapiens? Homo sensorium? Homo Erectus? Australopithecus?
+                            </li>
+                            <li>
+                                <ul>
+                                    <li>
+                                        Where do you draw that line and why?
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        Are only living beings capable of Will?
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                What is a
+                                <a href="https://en.wikibooks.org/wiki/Cell_Biology/Introduction/What_is_living">living being</a>
+                                ? Are viruses technically alive? How about
+                                computer parasites
+                                that exhibit more
+                                characteristics of being alive than viruses? Why are viruses not considered living?
+                                Why aren't computer parasites?
+                            </li>
+                            <li>
+                                Why are living beings so special that they should have this
+                                thing Will and some less living but
+                                <a href="http://theconversation.com/six-mysteries-of-jupiters-great-red-spot-80829">equally awesome and dynamic phenomena do not</a>
+                                ?
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
 
-            <p>
-                To draw an absolute line anywhere requires some very
-                heavy arguments, particularly because these are all spectrums and the boundaries are
-                more than fuzzy. What is it so special of a free-willing entity that other entities do
-                not have?
-            </p>
-            <p>
-                It appears to me that Will is a word to explain a
-                complicated idea, like feelings, but it does not map to a physical phenomena
-                directly.
-            </p>
-            <p>
-                Freedom, or liberty has no better luck. Without quantum physics, we
-                can't create new causal chains, so first we have to assume our brain is affected
-                by quantum level noise.<br />
-                And then, that's the same noise we get in
-                <a href="https://en.wikipedia.org/wiki/Quantum_fluctuation">empty space</a>
-                . It's not a characteristic of the being,
-                just inherent noise in the physical world.
-            </p>
-            <p>
-                In order to show free will, you'd have to be able
-                to untangle the problem of freedom, the problem of will and the problem of self.<br />
-                All of them.
-            </p>
-            <h2>
-                The Game (<a href="https://en.wikipedia.org/wiki/The_Game_(mind_game)">you just lost it</a>)
-            </h2>
-            <p>
-                The laws of physics aren't rules that constraint
-                what we can do.<br />
-                They are rules that drive it.
-            </p>
-            <p>
-                So if we have rules, let's make a game. Let's also
-                pretend that the game is not in our world cause then we get into a free-will-recursion
-                or something
-                ...
-                since wouldn't using
-                something of this world as a metaphor that itself would behave under the rules of the
-                world be self-contradictory? (was the game determined to be that way? Are the cards
-                destined to be shuffled that way? A dream within a dream? Azathoth? Is Inception a good
-                movie? Where are my pills?).
-            </p>
-            <h3>
-                To Drink or Not To
-                Drink
-            </h3>
-            <p>
-                Let's say I shuffle a deck of cards, and then my
-                and my friends draw one card at a time. We look at the card and based on the card, we
-                must follow some rule, like let's say five means drinks for guys, six for chicks,
-                three for me, two for you and whatever.
-            </p>
-            <p>
-                Now, if the rules don't permit me to do anything, the cards
-                that will be drawn were determined the moment they were shuffled.<br />
-                That doesn't make it predictable, as there are in fact more ways to
-                <a href="https://www.youtube.com/watch?v%3DuNS1QvDzCVw">shuffle a deck than there are atoms on Earth</a>
-                , and someone
-                should tell that to my drunk friend since I keep drawing three.
-            </p>
-            <p>
-                If you peeked at the deck though, then you would know
-                every single card that would be drawn.
-            </p>
-            <p>
-                Sure King's Cups rules require some decisions to
-                be made AFTER, but that needn't be the case &hellip;You might drink once per face
-                value of the card for example, and the cards you will draw have all been determined
-                before you start.
-            </p>
-            <p>
-                This is like hard-determinism, the rules are set, the
-                future is set and we're just getting shit faced.
-            </p>
-            <h3>
-                Back to Square One
-            </h3>
-            <p>
-                Now suppose instead we play
-                <a href="https://en.wikipedia.org/wiki/Snakes_and_Ladders">snakes and ladders</a>
-                . In this case, we take turns rolling the
-                dice and then we see what happens.<br />
-                No one knows how it's going to happen, except maybe if the computer is simulating
-                the dice-roll, in which case the fact that IT knows, doesn't mean that it makes
-                any difference for the players. In my hypothetical drinking game, all the information
-                about what's gonna happen in the game is already in the game.
-            </p>
-            <p>
-                We don't exert any decision (besides playing a
-                really pointless game).<br />
-                We don't get to skip our turn, or roll 1 die instead of 2 or whatever,
-                we're just rolling a dice and acting on it.
-            </p>
-            <p>
-                Just like real life &hellip;err I mean hard indeterminism.
-            </p>
+                <ul>
+                    <li>
+                        What does it mean to be free? Free from what?
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                Is freedom from causation required for free
+                                will?
+                            </li>
+                            <li>
+                                Is coercion a black or white matter?
+                            </li>
+                            <li>
+                                Where does radical freedom come in? Do we not
+                                always have a choice?
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
 
-            <h3>Tic Tac No</h3>
-            <div class="container-fluid">
-                <div class="col-sm-4 med-col">
-                    <img alt="" src="images/image4.png" title="" />
-                    
+                <p>
+                    To draw an absolute line anywhere requires some very
+                    heavy arguments, particularly because these are all spectrums and the boundaries are
+                    more than fuzzy. What is it so special of a free-willing entity that other entities do
+                    not have?
+                </p>
+                <p>
+                    It appears to me that Will is a word to explain a
+                    complicated idea, like feelings, but it does not map to a physical phenomena
+                    directly.
+                </p>
+                <p>
+                    Freedom, or liberty has no better luck. Without quantum physics, we
+                    can't create new causal chains, so first we have to assume our brain is affected
+                    by quantum level noise.<br />
+                    And then, that's the same noise we get in
+                    <a href="https://en.wikipedia.org/wiki/Quantum_fluctuation">empty space</a>
+                    . It's not a characteristic of the being,
+                    just inherent noise in the physical world.
+                </p>
+                <p>
+                    In order to show free will, you'd have to be able
+                    to untangle the problem of freedom, the problem of will and the problem of self.<br />
+                    All of them.
+                </p>
+            </div>
+
+            <h2>The Game (<a href="https://en.wikipedia.org/wiki/The_Game_(mind_game)">you just lost it</a>)</h2>
+            <div>
+                <p>
+                    The laws of physics aren't rules that constraint
+                    what we can do.<br />
+                    They are rules that drive it.
+                </p>
+                <p>
+                    So if we have rules, let's make a game. Let's also
+                    pretend that the game is not in our world cause then we get into a free-will-recursion
+                    or something
+                    ...
+                    since wouldn't using
+                    something of this world as a metaphor that itself would behave under the rules of the
+                    world be self-contradictory? (was the game determined to be that way? Are the cards
+                    destined to be shuffled that way? A dream within a dream? Azathoth? Is Inception a good
+                    movie? Where are my pills?).
+                </p>
+
+                <h3>To Drink or Not To Drink</h3>
+                <div>
+                    <p>
+                        Let's say I shuffle a deck of cards, and then my
+                        and my friends draw one card at a time. We look at the card and based on the card, we
+                        must follow some rule, like let's say five means drinks for guys, six for chicks,
+                        three for me, two for you and whatever.
+                    </p>
+                    <p>
+                        Now, if the rules don't permit me to do anything, the cards
+                        that will be drawn were determined the moment they were shuffled.<br />
+                        That doesn't make it predictable, as there are in fact more ways to
+                        <a href="https://www.youtube.com/watch?v%3DuNS1QvDzCVw">shuffle a deck than there are atoms on Earth</a>
+                        , and someone
+                        should tell that to my drunk friend since I keep drawing three.
+                    </p>
+                    <p>
+                        If you peeked at the deck though, then you would know
+                        every single card that would be drawn.
+                    </p>
+                    <p>
+                        Sure King's Cups rules require some decisions to
+                        be made AFTER, but that needn't be the case &hellip;You might drink once per face
+                        value of the card for example, and the cards you will draw have all been determined
+                        before you start.
+                    </p>
+                    <p>
+                        This is like hard-determinism, the rules are set, the
+                        future is set and we're just getting shit faced.
+                    </p>
                 </div>
-                <div class="col-sm-8 med-col">
+
+                <h3>Back to Square One</h3>
+                <div>
                     <p>
-                        Tic Tac Toe is a game so simple that every simple
-                        possibility fits in a piece of paper. We have decisions, but not really meaningful in
-                        the big picture.<br />
+                        Now suppose instead we play
+                        <a href="https://en.wikipedia.org/wiki/Snakes_and_Ladders">snakes and ladders</a>
+                        . In this case, we take turns rolling the
+                        dice and then we see what happens.<br />
+                        No one knows how it's going to happen, except maybe if the computer is simulating
+                        the dice-roll, in which case the fact that IT knows, doesn't mean that it makes
+                        any difference for the players. In my hypothetical drinking game, all the information
+                        about what's gonna happen in the game is already in the game.
                     </p>
                     <p>
-                        You either play perfectly and draw, or don't play
-                        perfectly and probably still draw.
+                        We don't exert any decision (besides playing a
+                        really pointless game).<br />
+                        We don't get to skip our turn, or roll 1 die instead of 2 or whatever,
+                        we're just rolling a dice and acting on it.
                     </p>
                     <p>
-                        This is closer to Soft Determinism, the idea that you
-                        kinda-sorta have a choice, but it's effectively been decided because you really
-                        can't pick the corner square unless you're stupid.
+                        Just like real life &hellip;err I mean hard indeterminism.
+                    </p>
+                </div>
+
+                <h3>Tic Tac No</h3>
+                <div class="container-fluid med-container-fluid">
+                    <div class="col-sm-4 med-col">
+                        <img alt="" src="images/image4.png" title="" />
+
+                    </div>
+                    <div class="col-sm-8 med-col">
+                        <p>
+                            Tic Tac Toe is a game so simple that every simple
+                            possibility fits in a piece of paper. We have decisions, but not really meaningful in
+                            the big picture.<br />
+                        </p>
+                        <p>
+                            You either play perfectly and draw, or don't play
+                            perfectly and probably still draw.
+                        </p>
+                        <p>
+                            This is closer to Soft Determinism, the idea that you
+                            kinda-sorta have a choice, but it's effectively been decided because you really
+                            can't pick the corner square unless you're stupid.
+                        </p>
+                    </div>
+                </div>
+
+                <h3> How Deep is your Will? </h3>
+                <div>
+                    <p>
+                        If we picked something like chess though, we have some
+                        restrictions of what we can do by the rules, but the amount of combinations is so
+                        ridiculously high, that you may as well consider it as if it was free, and requires
+                        will. Sure you can't move the pawn like a queen, but you can chose which pawn to
+                        move.
+                    </p>
+                    <p>
+                        The player has to be outside the game, he's
+                        playing the knight, he's not the knight being played...
+                    </p>
+                    <p>
+                        But, if somehow, the thing playing us, which must be
+                        outside the game, is also us; like a soul or some other magic that exists outside the
+                        physical world and its rules, then sure! Free-will away!
+                    </p>
+                    <p>
+                        Either way, this game is the closest we get to an
+                        analogy for libertarianism, everything is possible and you get to chose. The crown
+                        jewel of human intellect: Chess.
+                    </p>
+                    <p>
+                        I mean, of course, except
+                        <a href="https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)">Deep Blue beat the chess master in 1996</a>
+                        so &hellip;That's how deep that ocean goes &hellip;
                     </p>
                 </div>
             </div>
-            <h3> How Deep is your Will? </h3>
-            <p>
-                If we picked something like chess though, we have some
-                restrictions of what we can do by the rules, but the amount of combinations is so
-                ridiculously high, that you may as well consider it as if it was free, and requires
-                will. Sure you can't move the pawn like a queen, but you can chose which pawn to
-                move.
-            </p>
-            <p>
-                The player has to be outside the game, he's
-                playing the knight, he's not the knight being played...
-            </p>
-            <p>
-                But, if somehow, the thing playing us, which must be
-                outside the game, is also us; like a soul or some other magic that exists outside the
-                physical world and its rules, then sure! Free-will away!
-            </p>
-            <p>
-                Either way, this game is the closest we get to an
-                analogy for libertarianism, everything is possible and you get to chose. The crown
-                jewel of human intellect: Chess.
-            </p>
-            <p>
-                I mean, of course, except
-                <a href="https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)">Deep Blue beat the chess master in 1996</a>
-                so &hellip;That's how deep that ocean goes &hellip;
-            </p>
-            <h3>
-                Existential Angst Triggered
-            </h3>
-            <p>
-                So what do we do about it?
-            </p>
-            <p>
-                In some sense, the problem of free will is like the
-                problem of Jupiter pulling you out of bed in the morning with its gravitational
-                force.<br />
-                It is both true and mostly doesn't matter.<br />
-                No, you don't have free will, but you have no choice to live as if you did.<br />
-                But there are three big take aways you should try to get from this:
-            </p>
-            <ul>
-                <li>
-                    Don't praise yourself too much. You're
-                    lucky for any of your achievements, whether because you rolled well on the genetic
-                    dice, on the country dice, on the nurture dice, on the quantum-decision
-                    dice.
-                </li>
-                <li>
-                    Don't be too hard on others. You have no
-                    idea of the chain of dominoes weighing on the back of that person, forcing them (or
-                    pushing them, or coercing them, whatever) to make the decision they made.
-                </li>
-            </ul>
-            <p>
-                Now, there are some pretty big ethical
-                <a href="https://en.wikipedia.org/wiki/Kl%25C3%25BCver%25E2%2580%2593Bucy_syndrome">implications</a>
-                of free-will, like why punish someone
-                who's got no free-will, and that comes back to Jupiter.
-            </p>
-            <ul>
-                <li>
-                    Be practical. So what if you are a biological automaton
-                    worrying about how a
-                    <a href="https://en.wikipedia.org/wiki/Gamma-ray_burst">Gamma-Ray Burst</a>
-                    might
-                    <a href="https://www.youtube.com/watch?v%3DRLykC1VN7NY">wipe half of the earth's life at any moment</a>
-                    . You
-                    still have to have breakfast and feed your spawnlings. Just don't take it too
-                    seriously.
-                </li>
-            </ul>
-            <p>
-                In a sense, trying to explain free will is like trying to explain
-                qualia, like explaining to a bat what orange looks like, and much like color,
-                <a href="https://en.wikipedia.org/wiki/Firmament">the firmament</a>
-                , consciousness, borders,
-                <a href="https://en.wikipedia.org/wiki/Spontaneous_generation">spontaneous generation</a>
-                , civilization and the soul,
-                they're really just to abstract complex phenomena, and makes it easier to
-                navigate the world.<br />
-                To talk about them in simple words makes life easier, even though they aren't
-                really real.
-            </p>
-            <p>
-                As far as you measly mortal is concerned, in this large
-                and indifferent cosmos, there's no choice, but to make a choice.<br />
-                When you watch the ant scurry about it's business, it doesn't worry about
-                your great power and understanding, and neither should you worry about the
-                universe.<br />
-                Sure, this choice is an illusion elaborated by your brain, like your sense of self and
-                your weird dislike of Nickelback.
-            </p>
-            <p>
-                You can't chose to not chose, since that's a
-                choice, even if that choice is illusory. You still in charge of your
-                destiny.
-            </p>
-            <p>
-                I embrace the absurdity of acting like I have a
-                choice, because I have no other choice.
-            </p>
+
+            <h2>Existential Angst Triggered</h2>
+            <div>
+                <p>
+                    So what do we do about it?
+                </p>
+                <p>
+                    In some sense, the problem of free will is like the
+                    problem of Jupiter pulling you out of bed in the morning with its gravitational
+                    force.<br />
+                    It is both true and mostly doesn't matter.<br />
+                    No, you don't have free will, but you have no choice to live as if you did.<br />
+                    But there are three big take aways you should try to get from this:
+                </p>
+                <ul>
+                    <li>
+                        Don't praise yourself too much. You're
+                        lucky for any of your achievements, whether because you rolled well on the genetic
+                        dice, on the country dice, on the nurture dice, on the quantum-decision
+                        dice.
+                    </li>
+                    <li>
+                        Don't be too hard on others. You have no
+                        idea of the chain of dominoes weighing on the back of that person, forcing them (or
+                        pushing them, or coercing them, whatever) to make the decision they made.
+                    </li>
+                </ul>
+                <p>
+                    Now, there are some pretty big ethical
+                    <a href="https://en.wikipedia.org/wiki/Kl%25C3%25BCver%25E2%2580%2593Bucy_syndrome">implications</a>
+                    of free-will, like why punish someone
+                    who's got no free-will, and that comes back to Jupiter.
+                </p>
+                <ul>
+                    <li>
+                        Be practical. So what if you are a biological automaton
+                        worrying about how a
+                        <a href="https://en.wikipedia.org/wiki/Gamma-ray_burst">Gamma-Ray Burst</a>
+                        might
+                        <a href="https://www.youtube.com/watch?v%3DRLykC1VN7NY">wipe half of the earth's life at any moment</a>
+                        . You
+                        still have to have breakfast and feed your spawnlings. Just don't take it too
+                        seriously.
+                    </li>
+                </ul>
+                <p>
+                    In a sense, trying to explain free will is like trying to explain
+                    qualia, like explaining to a bat what orange looks like, and much like color,
+                    <a href="https://en.wikipedia.org/wiki/Firmament">the firmament</a>
+                    , consciousness, borders,
+                    <a href="https://en.wikipedia.org/wiki/Spontaneous_generation">spontaneous generation</a>
+                    , civilization and the soul,
+                    they're really just to abstract complex phenomena, and makes it easier to
+                    navigate the world.<br />
+                    To talk about them in simple words makes life easier, even though they aren't
+                    really real.
+                </p>
+                <p>
+                    As far as you measly mortal is concerned, in this large
+                    and indifferent cosmos, there's no choice, but to make a choice.<br />
+                    When you watch the ant scurry about it's business, it doesn't worry about
+                    your great power and understanding, and neither should you worry about the
+                    universe.<br />
+                    Sure, this choice is an illusion elaborated by your brain, like your sense of self and
+                    your weird dislike of Nickelback.
+                </p>
+                <p>
+                    You can't chose to not chose, since that's a
+                    choice, even if that choice is illusory. You still in charge of your
+                    destiny.
+                </p>
+                <p>
+                    I embrace the absurdity of acting like I have a
+                    choice, because I have no other choice.
+                </p>
+            </div>
         </div>
 
+        <h1>What do you think?</h1>
         <div class="med-section row">
-            <h1>
-                What do you think?
-            </h1>
+
             <p>
                 You're probably either denying what was said
                 in-lieu-of sustaining the believe of your free-will, or going through a mild
