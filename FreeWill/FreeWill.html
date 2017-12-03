@@ -10,93 +10,94 @@
     <script src="/Scripts/jquery-3.2.1.js" type="text/javascript"></script>
     <script src="/Scripts/meditations.js" type="text/javascript"></script>
 
+    <script type="text/javascript">
+        //Make all hyperlinks in new page except if they refer
+        // to something local
+        $("#all-content a").not("[href^='#']").attr("target", "_new");
+    </script>
     <title></title>
 </head>
 <body>
     <div id="all-content">
+        <div class="med-title"><a name="free-will"></a>On free will</div>
         <div class="container-fluid">
-            <h1><a name="free-will"></a>On free will</h1>
+
             <div class="med-section row">
-
-                <div>
-                    <p>
-                        How trustworthy is our intuition? Our common sense?<br />
-                        How does common sense compare to that which is not common?<br />
-                        To the very fast, to the very slow? To the large and the very small?<br />
-                        To very smart and the very dumb?
-                    </p>
-                    <p>
-                        To what we choose, and how we choose?
-                    </p>
-                </div>
-
-                <h2><a name="free-will-fate"></a>Fate</h2>
-                <div>
-                    <p>
-                        There was a story about a boy, his name was Oedipus. His
-                        father, King Liaus of Thebes, heard a prophecy from an Oracle that his boy was fated to
-                        kill his father and marry his mother. Terrified, he left his own child to die in the
-                        mountains.<br />
-                        But shepherds picked him up and he eventually was raised as the prince of another
-                        city.<br />
-                        When he came of age, Oedipus heard of his prophecy. Terrified, as he did not want to
-                        kill his father and marry his mother, he ran away from the city he was raised in, to
-                        Thebes.<br />
-                        In his adventures, he encountered his birth-father Liaus and in a quarrel, he killed
-                        him.<br />
-                        Then he freed Thebes from the threat of a Sphinx, earning the hand of the Queen of
-                        Thebes, his mother. Unbeknown to him, all attempts to escape fate wove it.
-                    </p>
-                    <p>
-                        Inevitably, what was to be, became.
-                    </p>
-                </div>
-
-                <h2><a name="free-will-determinism"></a>Determinism</h2>
-                <div>
-                    <p>
-                        Fate is the precursor to determinism. The idea that one
-                        event leads inevitably to another like a chain of dominos, and no matter what we do,
-                        we're just along for the ride.
-                    </p>
-                    <p>
-                        The more we learnt about the world, the more it seemed to follow a
-                        cause and effect. Physics tells us that if you know the initial conditions, then you
-                        know everything that will follow.<br />
-                        This is determinism.<br />
-                    </p>
-
-
-                    <div class="col-sm-12 med-col">
-                        <img alt="https://i.pinimg.com/originals/d9/2c/b9/d92cb9dbd490dc3d76a2ccbab6e4f66a.gif" src="/FreeWill/images/image13.gif" title="" />
-                    </div>
-
-                    <p>
-                        If the laws of physics describe so accurately the world,
-                        allowing us to predict the seasons, the stars, the fundamental makings of the cosmos,
-                        how can we ever break free from those laws?<br />
-                        Do we simply fall into the chain of events, no differently than a rock tumbling down a
-                        hill?<br />
-                        But then again, why can't science predict our behaviour? Or the weather?<br />
-                        Maybe there's things that science can't explain, and maybe that's
-                        where free will lies.
-                    </p>
-                    <p>
-                        Maybe determinism and free will could
-                        coexist?
-                    </p>
-                    <p>
-                        Maybe science got it wrong and the laws don't
-                        work.<br />
-                        Things aren't as clockwork, and magic can happen.<br />
-                        At least sometimes?
-                    </p>
-
-                </div>
+                <p>
+                    How trustworthy is our intuition? Our common sense?<br />
+                    How does common sense compare to that which is not common?<br />
+                    To the very fast, to the very slow? To the large and the very small?<br />
+                    To very smart and the very dumb?
+                </p>
+                <p>
+                    To what we choose, and how we choose?
+                </p>
             </div>
 
-        </div>
-        <div class="container-fluid">
+            <h1><a name="free-will-fate"></a>Fate</h1>
+            <div>
+                <p>
+                    There was a story about a boy, his name was Oedipus. His
+                    father, King Liaus of Thebes, heard a prophecy from an Oracle that his boy was fated to
+                    kill his father and marry his mother. Terrified, he left his own child to die in the
+                    mountains.<br />
+                    But shepherds picked him up and he eventually was raised as the prince of another
+                    city.<br />
+                    When he came of age, Oedipus heard of his prophecy. Terrified, as he did not want to
+                    kill his father and marry his mother, he ran away from the city he was raised in, to
+                    Thebes.<br />
+                    In his adventures, he encountered his birth-father Liaus and in a quarrel, he killed
+                    him.<br />
+                    Then he freed Thebes from the threat of a Sphinx, earning the hand of the Queen of
+                    Thebes, his mother. Unbeknown to him, all attempts to escape fate wove it.
+                </p>
+                <p>
+                    Inevitably, what was to be, became.
+                </p>
+            </div>
+
+            <h1><a name="free-will-determinism"></a>Determinism</h1>
+            <div>
+                <p>
+                    Fate is the precursor to determinism. The idea that one
+                    event leads inevitably to another like a chain of dominos, and no matter what we do,
+                    we're just along for the ride.
+                </p>
+                <p>
+                    The more we learnt about the world, the more it seemed to follow a
+                    cause and effect. Physics tells us that if you know the initial conditions, then you
+                    know everything that will follow.<br />
+                    This is determinism.<br />
+                </p>
+
+
+                <div class="col-sm-12 med-col">
+                    <img alt="https://i.pinimg.com/originals/d9/2c/b9/d92cb9dbd490dc3d76a2ccbab6e4f66a.gif" src="/FreeWill/images/image13.gif" title="" />
+                </div>
+
+                <p>
+                    If the laws of physics describe so accurately the world,
+                    allowing us to predict the seasons, the stars, the fundamental makings of the cosmos,
+                    how can we ever break free from those laws?<br />
+                    Do we simply fall into the chain of events, no differently than a rock tumbling down a
+                    hill?<br />
+                    But then again, why can't science predict our behaviour? Or the weather?<br />
+                    Maybe there's things that science can't explain, and maybe that's
+                    where free will lies.
+                </p>
+                <p>
+                    Maybe determinism and free will could
+                    coexist?
+                </p>
+                <p>
+                    Maybe science got it wrong and the laws don't
+                    work.<br />
+                    Things aren't as clockwork, and magic can happen.<br />
+                    At least sometimes?
+                </p>
+
+            </div>
+
             <h1><a name="free-will-wound"></a>The Wound of the Human Ego</h1>
             <div class="med-section row">
                 <div class="container-fluid med-container-fluid">
@@ -153,7 +154,7 @@
                 <br />
                 <p>
                     But we had to build bigger and better temples to the
-                    <a href="https://en.wikipedia.org/wiki/G%25C3%25B6bekli_Tepe">old gods</a>
+                    <a href="https://en.wikipedia.org/wiki/Göbekli_Tepe">old gods</a>
                     . But as our buildings got bigger, we had to get smarter. We
                     had to keep track of how many sheep were ours, and not our neighbours.<br />
                     How many sheep we traded to get more sticks and stones, for our buildings.<br />
