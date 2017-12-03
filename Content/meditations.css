@@ -1,4 +1,9 @@
-﻿.med-section {
+﻿.med-title {
+    font-family: 'Atomic Age', cursive;
+    font-size: 57px;
+}
+
+.med-section {
     max-width: 650px;
     margin-left: 0;
     margin-right: 0;
@@ -31,6 +36,42 @@
 .med-col {
     padding-left: 0;
     padding-right: 0;
+}
+
+
+#med-outline {
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 6px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    color: #c4c4c4;
+    background-color: #16161d;
+    font-size: 23px;
+    width: 30vw;
+    font-family: 'Atomic Age', cursive;
+    transform: translate3d(0px, 0px, 122px);
+}
+
+.med-outline-children {
+    margin-left: 13px;
+}
+
+.med-section-link {
+    cursor: pointer;
+}
+
+.med-outline-depth-1 {
+    font-size: 19px;
+}
+
+.med-outline-depth-2 {
+    font-size: 17px;
+}
+
+.med-outline-depth-3 {
+    font-size: 13px;
 }
 
 

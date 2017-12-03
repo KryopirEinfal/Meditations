@@ -1,13 +1,8 @@
 ﻿.step.slide {
     overflow: auto;
-    min-width: 65vh;
+    min-width: 80vh;
     height: 95vh;
-}
-
-.step.slide {
-    overflow: auto;
-    min-width: 65vh;
-    height: 95vh;
+    padding-left: 100px;
 }
 
 .step.slide::-webkit-scrollbar {

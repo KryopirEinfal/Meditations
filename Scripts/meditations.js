@@ -2,9 +2,24 @@
 
 function AllChildren(element, type, depth)
 {
-    if (element === document || depth === 0)
+    if (element === document)
         return $(element).find(type);
     return $(element).next().find(type);
+}
+
+function CreateNode(child, parent)
+{
+    let jChild = $(child);
+    let node = {
+        "text": jChild.text(),
+        "header": jChild[0].outerHTML,
+        "jVal": jChild,
+        "val": child,
+        "parent": parent,
+        "children": [],
+        "id": jChild.find("a").attr("name")
+    };
+    return node;
 }
 
 function CreateHierarchyInternal(node, childSelectors, depth)
@@ -14,15 +29,8 @@ function CreateHierarchyInternal(node, childSelectors, depth)
     for (let i = 0; i < children.length; ++i)
     {
         let child = children[i];
-        let jChild = $(child);
-        let childNode = {
-            "text": jChild.text(),
-            "header": jChild[0].outerHTML,
-            "jVal": jChild,
-            "val": child,
-            "parent": node,
-            "children": []
-        };
+
+        let childNode = CreateNode(child, node);
         childNode.toString = function () { return childNode.text; }
 
         node.children.push(childNode);
@@ -30,15 +38,14 @@ function CreateHierarchyInternal(node, childSelectors, depth)
 
         // Removing all children will leave nothing but the actual content 
         // of the current node
-        jChild.next().remove();
-        jChild.remove();
+        childNode.jVal.next().remove();
+        childNode.jVal.remove();
         //calculate final depth;
         if (childNode.leafsDepth > leafsDepth)
             leafsDepth = childNode.leafsDepth;
     }
 
-    if(depth !== 0)
-        node.content = node.jVal.next()[0].outerHTML;
+    node.content = node.jVal.next()[0].outerHTML;
     node.depth = depth;
     node.leafsDepth = leafsDepth;
 }
@@ -48,18 +55,14 @@ function CreateHierarchy(childSelectors, root)
     if (typeof root === "undefined")
         root = document;
 
-    let rootNode = {
-        "text": "I AM ROOT",
-        "val": root,
-        "jVal": $(root),
-        "children": []
-    };
+    let rootNode = CreateNode(root, null);
+
     CreateHierarchyInternal(rootNode, childSelectors, 0);
     return rootNode;
 }
 
-let g_Radiuses = [[], [], [1200, 2500, 4500], [700, 2500], [650]];
-let g_Debug = true;
+let g_Radiuses = [[0,0,0,0,0], [1200, 2700, 4500], [800, 2500], [650]];
+let g_Debug = false;
 
 function CreateSlides(node, center, angleDegParent, depth)
 {
@@ -92,7 +95,7 @@ function CreateSlides(node, center, angleDegParent, depth)
         // Say 3 children each with [0,1,2] more levels.
         // The would all end up aligned at 0 degrees, and we don't want that
         let numberOfExtraLevels = child.leafsDepth - child.depth;
-        let phaseShift = numberOfExtraLevels * child.depth * 30;
+        let phaseShift = numberOfExtraLevels * child.depth * 45;
 
 
         let angleDeg = (realIndex / childCount) * 360 + angleDegParent + phaseShift;
@@ -111,25 +114,49 @@ function CreateSlides(node, center, angleDegParent, depth)
         }
         childHtml += child.header + child.content;
 
-        $("#impress").append(`<div class='step slide' data-x='${x}' data-y='${y}' data-rotate='${angleDeg}' >${childHtml}</div>`);
+        $("#impress").append(`<div class='step slide' data-x='${x}' data-y='${y}' data-rotate='${angleDeg}' id='${child.id}'>${childHtml}</div>`);
         CreateSlides(child, { "x": x, "y": y }, angleDeg, depth + 1);
     }
 }
 
+function CreateOutlineInternal(node, depth, res)
+{
+    res.push(`<div class="med-section-link" goto="${node.id}">${node.text}</div>`);
+    if (node.children.length === 0)
+        return;
+    for (let i = 0; i < node.children.length; ++i)
+    {
+        res.push(`<div class="med-outline-children med-outline-depth-${depth+1}">`);
+        CreateOutlineInternal(node.children[i], depth + 1, res);
+        res.push(`</div>`);
+    }
+}
+
+function CreateOutline(node)
+{
+    let res = [];
+    CreateOutlineInternal(node, 0, res);
+    let html = res.join("\n");
+    $("#med-outline").html(html);
+    $(".med-section-link").click(function (e)
+    {
+        Meditations.Impress.goto($(e.target).attr("goto"));
+    });
+}
+
 function Load()
 {
-    let documentHierarchy = CreateHierarchy([".med-title", "h1", "h2", "h3"], $("#byte-content")[0])
-        .children;
-    Meditations.Hierarchy = documentHierarchy;
-    let number = documentHierarchy.length;
+    let root = CreateHierarchy(["h1", "h2", "h3"], $(".med-title")[0]);
+    Meditations.Hierarchy = root;
 
-    let radius = 6000;
-    let root = documentHierarchy[0];
     let html = root.header + root.content;
-    $("#impress").append(`<div class='step slide' data-x='0' data-y='0'>${html}</div>`);
+    $("#impress").append(`<div class='step slide' data-x='0' data-y='0' id='${root.id}'>${html}</div>`);
     CreateSlides(root, { "x": 0, "y": 0 }, 0 , 0);
 
     $("#impress").append(`<div id="overview" class="step" data-x="0" data-y="0" data-z="0" data-scale="7"></div>`);
+
+    CreateOutline(root);
+
     $("#impress a").attr("target", "_new");
 }
 
@@ -141,6 +168,7 @@ $(document).ready(
             function ()
             {
                 Load();
-                impress().init();
+                Meditations.Impress = impress();
+                Meditations.Impress.init();
             });
     });
