@@ -2,19 +2,37 @@
 <html>
     <head>
         <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"> 
-        <title>Meditations</title> 
-        <link rel="stylesheet" href="Content/bootstrap.min.css" />
-        <link rel="stylesheet" href="Content/css.css" />
+        <title>Thinking Bytes</title>
+        <link href="/Content/bootstrap.css" type="text/css" rel="stylesheet" />
+        <link href="/Content/meditations.css" type="text/css" rel="stylesheet" />
 
-        <script src="Scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
-        <script src="Scripts/js.js" type="text/javascript"></script>
+        <script src="/Scripts/jquery-3.2.1.js" type="text/javascript"></script>
+        <script src="/Scripts/meditations.js" type="text/javascript"></script>
+        <style>
+            .step.slide {
+                overflow: auto;
+                min-width: 65vh;
+                height: 95vh;
+            }
+        </style>
+
     </head> 
  
     <body style="cursor: auto;"> 
-        <div class="allContainer">
-            hello world
+        <div class="all-container">
+            <div id="impress" class="container-fluid">
+
+            </div>
         </div>
+        <div id="byte-content" style="display: none;">
+
+        </div>
+
+        <footer>
+            <script src="http://impress.github.io/impress.js/js/impress.js" type="text/javascript"></script>
+        </footer>
     </body>
+    
     
 
 </html>

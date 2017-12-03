@@ -1,25 +1,23 @@
-﻿class Node
+﻿function AllChildren(element, type, depth)
 {
-
-}
-
-function AllChildren(element, type)
-{
-    if (element === document)
+    if (element === document || depth === 0)
         return $(element).find(type);
     return $(element).next().find(type);
 }
 
 function CreateHierarchyInternal(node, childSelectors, depth)
 {
-    let children = AllChildren(node.val, childSelectors[depth]);
+    let children = AllChildren(node.val, childSelectors[depth], 0);
     for (let i = 0; i < children.length; ++i)
     {
         let child = children[i];
         let jChild = $(child);
+        let content = jChild.next();
         let childNode = {
             "text": jChild.text(),
             "val": child,
+            "width": content.width(),
+            "height": content.height(),
             "children": []
         };
         childNode.toString = function () { return childNode.text; }
@@ -29,20 +27,47 @@ function CreateHierarchyInternal(node, childSelectors, depth)
     }
 }
 
-function CreateHierarchy(childSelectors)
+function CreateHierarchy(childSelectors, root)
 {
-    let root = {
-        "val": document,
+    if (typeof root === "undefined")
+        root = document;
+
+    let rootNode = {
+        "val": root,
         "children": []
     };
-    CreateHierarchyInternal(root, childSelectors, 0);
-    return root;
+    CreateHierarchyInternal(rootNode, childSelectors, 0);
+    return rootNode;
+}
+
+function Load()
+{
+    var documentHierarchy = CreateHierarchy(["h1", "h2", "h3"], $("#byte-content")[0]).children;
+    let number = documentHierarchy.length;
+
+    let radius = 1000;
+    let child = documentHierarchy[0];
+
+    jChild = $(child.val)
+    var childHtml = jChild[0].outerHTML + (jChild.next().html() != undefined ? jChild.next().html() : "")
+    $("#impress").append("<div class='step slide' data-x='0' data-y='0'>" + childHtml + "</div>")
+    for (let i = 1; i < number; ++i)
+    {
+        let child = documentHierarchy[i];
+        jChild = $(child.val)
+        var childHtml = jChild[0].outerHTML + (jChild.next().html() != undefined ? jChild.next().html() : "")
+
+        let angleDeg = ((i - 1) / (number - 1)) * 360;
+        let angleRad = ((i - 1) / (number - 1)) * 2 * Math.PI;
+        let x = radius * Math.cos(angleRad);
+        let y = radius * Math.sin(angleRad);
+
+        $("#impress").append(`<div class='step slide' data-x='${x}' data-y='${y}' data-rotate='${angleDeg}' >${childHtml}</div>`);
+    }
+
+    $("#impress").append(`<div id="overview" class="step" data-x="0" data-y="0" data-z="0" data-scale="10"></div>`);
 }
 
 $(document).ready(function () {
-    let h1s = $("h1");
-    for (let i = 0; i < h1s.length; ++i)
-    {
-        let h2s = $(h1s[i]).next().find("h2")
-    }
-});
+    $("#byte-content").load("FreeWill/FreeWill.html #all-content");
+    });
