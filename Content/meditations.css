@@ -4,10 +4,31 @@
     margin-right: 0;
 }
 
+.container-fluid h1,
+.container-fluid h2,
+.container-fluid h3 {
+    font-family: 'Atomic Age', cursive;
+}
+
+.container-fluid p {
+    font-family: 'Source Code Pro', monospace;
+}
+
 .container-fluid {
 }
 
 .med-container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.med-col img {
+    width: 100%;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.med-col {
     padding-left: 0;
     padding-right: 0;
 }
@@ -70,13 +91,3 @@
     }
 }
 
-.med-col img {
-    width: 100%;
-    padding: 5px;
-    overflow: hidden;
-}
-
-.med-col {
-    padding-left: 0;
-    padding-right: 0;
-}

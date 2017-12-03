@@ -1,0 +1,22 @@
+﻿.step.slide {
+    overflow: auto;
+    min-width: 65vh;
+    height: 95vh;
+}
+
+.step.slide {
+    overflow: auto;
+    min-width: 65vh;
+    height: 95vh;
+}
+
+.step.slide::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.step.slide::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 13px rgba(0,0,0,.3);
+    background-color: #0000001A;
+}
