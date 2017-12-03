@@ -58,23 +58,57 @@ function CreateHierarchy(childSelectors, root)
     return rootNode;
 }
 
-let g_Radiuses = [[], [], [1500, 3000, 4500], [750, 2000], [750]];
+let g_Radiuses = [[], [], [1200, 2500, 4500], [700, 2500], [650]];
 let g_Debug = true;
 
 function CreateSlides(node, center, angleDegParent, depth)
 {
-    let chilren = node.children;
-    for (let i = 0; i < chilren.length; ++i)
-    {
-        let child = chilren[i];
+    let children = node.children;
 
-        let angleDeg = (i / chilren.length) * 360 + angleDegParent;
+    let leafDepthToCountMap = {};
+
+    for (let i = 0; i < children.length; ++i)
+    {
+        let child = children[i];
+
+        let numberOfChildrenWithLeafDepth = children.filter(v => v.leafsDepth === child.leafsDepth).length;
+
+        //We distribute children differently based on whether they have children or not
+        // So instead of using their index (i), we use their index relative to all
+        // their siblings with the same leafDepth
+        let realIndex = 0;
+        if (leafDepthToCountMap[numberOfChildrenWithLeafDepth] === undefined)
+            leafDepthToCountMap[numberOfChildrenWithLeafDepth] = 0;
+        else
+            leafDepthToCountMap[numberOfChildrenWithLeafDepth] += 1;
+
+        realIndex = leafDepthToCountMap[numberOfChildrenWithLeafDepth];
+
+        //Number of children with as many leafDepths
+        let childCount = numberOfChildrenWithLeafDepth;
+
+        // So that not all children with different level of children end up 
+        // with 0 degrees, we phase shift them 
+        // Say 3 children each with [0,1,2] more levels.
+        // The would all end up aligned at 0 degrees, and we don't want that
+        let numberOfExtraLevels = child.leafsDepth - child.depth;
+        let phaseShift = numberOfExtraLevels * child.depth * 30;
+
+
+        let angleDeg = (realIndex / childCount) * 360 + angleDegParent + phaseShift;
         let angleRad = angleDeg * Math.PI / 180;
-        let radius = g_Radiuses[child.depth][child.leafsDepth - child.depth];
+        let radius = g_Radiuses[child.depth][numberOfExtraLevels];
         let x = center.x + radius * Math.cos(angleRad);
         let y = center.y + radius * Math.sin(angleRad);
 
-        let childHtml = g_Debug ? `<span>Radius ${radius} from parent '${child.parent.text}'</span>` : ""
+        let childHtml = "";
+        if (g_Debug)
+        {
+            childHtml += `<span>`;
+            childHtml += `Parent: '${child.parent.text}'; Depth: ${child.depth} ; Radius: ${radius}; `
+            childHtml += `extra-depth: ${numberOfExtraLevels}; phase: ${phaseShift};`
+            childHtml += `</span >`;
+        }
         childHtml += child.header + child.content;
 
         $("#impress").append(`<div class='step slide' data-x='${x}' data-y='${y}' data-rotate='${angleDeg}' >${childHtml}</div>`);
@@ -95,7 +129,7 @@ function Load()
     $("#impress").append(`<div class='step slide' data-x='0' data-y='0'>${html}</div>`);
     CreateSlides(root, { "x": 0, "y": 0 }, 0 , 0);
 
-    $("#impress").append(`<div id="overview" class="step" data-x="0" data-y="0" data-z="0" data-scale="15"></div>`);
+    $("#impress").append(`<div id="overview" class="step" data-x="0" data-y="0" data-z="0" data-scale="7"></div>`);
     $("#impress a").attr("target", "_new");
 }
 
