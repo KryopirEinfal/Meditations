@@ -49,13 +49,43 @@
     color: #c4c4c4;
     background-color: #16161d;
     font-size: 23px;
-    width: 30vw;
     font-family: 'Atomic Age', cursive;
-    transform: translate3d(0px, 0px, 122px);
+    transform: translate3d(0px, 0px, 119px);
+    font-size: 2.3vw;
+    width: 35%;
+    max-height: 95%;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    overflow: auto;
+}
+
+#med-outline::-webkit-scrollbar {
+    width: 12px;
+    background-color: #454545;
+    border-radius: 10px;
+}
+
+#med-outline::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 13px rgba(0,0,0,.3);
+    background-color: #0000001A;
+}
+
+@media (min-width: 1500px) {
+    #med-outline {
+        font-size: 34.5px;
+    }
+}
+
+@media (max-width: 600px) {
+    #med-outline {
+        display: none;
+    }
 }
 
 .med-outline-children {
-    margin-left: 13px;
+    margin-left: 4%;
 }
 
 .med-section-link {
@@ -63,15 +93,15 @@
 }
 
 .med-outline-depth-1 {
-    font-size: 19px;
+    font-size: 80%;
 }
 
 .med-outline-depth-2 {
-    font-size: 17px;
+    font-size: 80%;
 }
 
 .med-outline-depth-3 {
-    font-size: 13px;
+    font-size: 90%;
 }
 
 
@@ -131,4 +161,3 @@
         float: left;
     }
 }
-

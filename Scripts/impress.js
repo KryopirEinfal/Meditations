@@ -21,7 +21,6 @@
 ( function( document, window ) {
     "use strict";
     var lib;
-
     // HELPER FUNCTIONS
 
     // `pfx` is a function that takes a standard CSS property name as a parameter
@@ -122,8 +121,8 @@
     // `computeWindowScale` counts the scale factor between window size and size
     // defined for the presentation in the config.
     var computeWindowScale = function( config ) {
-        var hScale = window.innerHeight / config.height,
-            wScale = window.innerWidth / config.width,
+        var hScale = $("#impress-container")[0].clientHeight / config.height,
+            wScale = $("#impress-container")[0].clientWidth / config.width,
             scale = hScale > wScale ? wScale : hScale;
 
         if ( config.maxScale && scale > config.maxScale ) {
@@ -166,9 +165,9 @@
 
     // Some default config values.
     var defaults = {
-        width: 1024,
-        height: 768,
-        maxScale: 1,
+        width: 550,
+        height: 650,
+        maxScale: 2,
         minScale: 0,
 
         perspective: 1000,
@@ -186,7 +185,6 @@
     // for a presentation based on the element with given id ("impress"
     // by default).
     var impress = window.impress = function( rootId ) {
-
         // If impress.js is not supported by the browser return a dummy API
         // it may not be a perfect solution but we return early and avoid
         // running code that may use features not implemented in the browser.
@@ -347,7 +345,7 @@
                 )
             };
 
-            windowScale = computeWindowScale( config );
+            windowScale = computeWindowScale(config );
 
             // Wrap steps with "canvas" element
             lib.util.arrayify( root.childNodes ).forEach( function( el ) {
@@ -374,7 +372,7 @@
             css( root, {
                 top: "50%",
                 left: "50%",
-                perspective: ( config.perspective / windowScale ) + "px",
+                perspective: (config.perspective / windowScale ) + "px",
                 transform: scale( windowScale )
             } );
             css( canvas, rootStyles );
@@ -507,13 +505,13 @@
             // with scaling down and move and rotation are delayed.
             var zoomin = target.scale >= currentState.scale;
 
-            duration = lib.util.toNumber( duration, config.transitionDuration );
+            duration = lib.util.toNumber(duration, config.transitionDuration );
             var delay = ( duration / 2 );
 
             // If the same step is re-selected, force computing window scaling,
             // because it is likely to be caused by window resize
             if ( el === activeStep ) {
-                windowScale = computeWindowScale( config );
+                windowScale = computeWindowScale(config );
             }
 
             var targetScale = target.scale * windowScale;
@@ -537,7 +535,7 @@
                 // we need to "scale" the perspective, too
                 // For IE 11 support we must specify perspective independent
                 // of transform.
-                perspective: ( config.perspective / targetScale ) + "px",
+                perspective: (config.perspective / targetScale ) + "px",
                 transform: scale( targetScale ),
                 transitionDuration: duration + "ms",
                 transitionDelay: ( zoomin ? delay : 0 ) + "ms"
@@ -808,7 +806,8 @@
             prev: prev,
             swipe: swipe,
             tear: tear,
-            lib: lib
+            lib: lib,
+            getConfig: function () { return config; }
         } );
 
     };

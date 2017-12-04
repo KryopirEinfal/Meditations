@@ -1,8 +1,7 @@
 ﻿.step.slide {
     overflow: auto;
-    min-width: 80vh;
-    height: 95vh;
-    padding-left: 100px;
+    width: 550px;
+    height: 600px;
 }
 
 .step.slide::-webkit-scrollbar {
@@ -14,4 +13,30 @@
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 13px rgba(0,0,0,.3);
     background-color: #0000001A;
+}
+
+#impress-container {
+    position: relative;
+    left: 35%;
+    height: 100%;
+    margin-top: 20px;
+    width: 65%;
+    margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+    #med-outline {
+        display: none;
+    }
+
+    #impress-container {
+        left: 0;
+        width: 100%;
+    }
+}
+
+.all-container {
+    width: 96vw;
+    height: 96vh;
+    margin: 0;
 }

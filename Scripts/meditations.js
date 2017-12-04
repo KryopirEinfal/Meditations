@@ -153,7 +153,7 @@ function Load()
     $("#impress").append(`<div class='step slide' data-x='0' data-y='0' id='${root.id}'>${html}</div>`);
     CreateSlides(root, { "x": 0, "y": 0 }, 0 , 0);
 
-    $("#impress").append(`<div id="overview" class="step" data-x="0" data-y="0" data-z="0" data-scale="7"></div>`);
+    $("#impress").append(`<div id="overview" class="step" data-x="0" data-y="0" data-z="0" data-scale="10"></div>`);
 
     CreateOutline(root);
 
