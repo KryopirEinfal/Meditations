@@ -11,7 +11,7 @@
 
 .med-title {
     font-family: 'Atomic Age', cursive;
-    font-size: 57px;
+    font-size: 91px;
 }
 
 .med-section {
@@ -71,6 +71,18 @@
     overflow: auto;
 }
 
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: #454545;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 13px rgba(0,0,0,.3);
+    background-color: #0000001A;
+}
+
 #med-outline::-webkit-scrollbar {
     width: 8px;
     background-color: #454545;
@@ -102,6 +114,11 @@
 .med-section-link {
     cursor: pointer;
 }
+
+.med-section-link-overview {
+    font-size: 60%;
+}
+
 
 .med-outline-depth-1 {
     font-size: 80%;

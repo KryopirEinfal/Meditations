@@ -61,7 +61,7 @@ function CreateHierarchy(childSelectors, root)
     return rootNode;
 }
 
-let g_Radiuses = [[0,0,0,0,0], [1200, 2700, 4500], [800, 2500], [650]];
+let g_Radiuses = [[0,0,0,0,0], [1200, 2700, 3000], [800, 1700], [650]];
 let g_Debug = false;
 
 function CreateSlides(node, center, angleDegParent, depth)
@@ -136,6 +136,7 @@ function CreateOutline(node)
 {
     let res = [];
     CreateOutlineInternal(node, 0, res);
+    res.push(`<div class="med-section-link med-section-link-overview" goto="overview">Overview</div>`);
     let html = res.join("\n");
     $("#med-outline").html(html);
     $(".med-section-link").click(function (e)
@@ -153,7 +154,7 @@ function Load()
     $("#impress").append(`<div class='step slide' data-x='0' data-y='0' id='${root.id}'>${html}</div>`);
     CreateSlides(root, { "x": 0, "y": 0 }, 0 , 0);
 
-    $("#impress").append(`<div id="overview" class="step" data-x="0" data-y="0" data-z="0" data-scale="10"></div>`);
+    $("#impress").append(`<div id="overview" class="step" data-x="0" data-y="0" data-z="0" data-scale="7"></div>`);
 
     CreateOutline(root);
 

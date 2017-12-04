@@ -644,7 +644,8 @@
         // Note: For now, this function is made available to be used by the swipe plugin (which
         // is the UI counterpart to this). It is a semi-internal API and intentionally not
         // documented in DOCUMENTATION.md.
-        var swipe = function( pct ) {
+        var swipe = function (pct) {
+
             if ( Math.abs( pct ) > 1 ) {
                 return;
             }
@@ -3652,7 +3653,9 @@
     var startX = 0;
     var lastX = 0;
     var lastDX = 0;
-    var threshold = window.innerWidth / 20;
+    var finalThreshold = window.innerWidth / 5;
+    var thresholdAnim = window.innerWidth / 15;
+    var threshold = window.innerWidth / 10;
 
     document.addEventListener( "touchstart", function( event ) {
         lastX = startX = event.touches[ 0 ].clientX;
@@ -3666,19 +3669,27 @@
          lastDX = lastX - x;
          lastX = x;
 
-         window.impress().swipe( diff / window.innerWidth );
+         let windowDiff = Math.abs(diff);
+         // smooth it out
+         let sentDiff = diff > 0 ? (diff - thresholdAnim) : (diff + thresholdAnim);
+         if (windowDiff > thresholdAnim)
+             window.impress().swipe(sentDiff / window.innerWidth );
      } );
 
      document.addEventListener( "touchend", function() {
          var totalDiff = lastX - startX;
-         if ( Math.abs( totalDiff ) > window.innerWidth / 5 && ( totalDiff * lastDX ) <= 0 ) {
-             if ( totalDiff > window.innerWidth / 5 && lastDX <= 0 ) {
+         if (Math.abs(totalDiff) > finalThreshold && (totalDiff * lastDX) <= 0)
+         {
+             if (totalDiff > finalThreshold && lastDX <= 0)
+             {
                  window.impress().prev();
-             } else if ( totalDiff < -window.innerWidth / 5 && lastDX >= 0 ) {
+             } else if (totalDiff < - finalThreshold && lastDX >= 0 ) {
                  window.impress().next();
              }
-         } else if ( Math.abs( lastDX ) > threshold ) {
-             if ( lastDX < -threshold ) {
+         } else if (Math.abs(lastDX) > threshold)
+         {
+             if (lastDX < -threshold)
+             {
                  window.impress().prev();
              } else if ( lastDX > threshold ) {
                  window.impress().next();

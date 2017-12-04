@@ -41,3 +41,11 @@
     height: 96vh;
     margin: 0;
 }
+
+.impress-mobile #impress-container {
+    margin: 0;
+}
+
+.impress-mobile .step.slide {
+    height: 700px;
+}
