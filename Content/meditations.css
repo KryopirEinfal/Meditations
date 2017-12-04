@@ -1,4 +1,15 @@
-﻿.med-title {
+﻿body {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.all-container, #all-content {
+    background: black;
+    color: #c8c8c8;
+}
+
+.med-title {
     font-family: 'Atomic Age', cursive;
     font-size: 57px;
 }
@@ -61,7 +72,7 @@
 }
 
 #med-outline::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
     background-color: #454545;
     border-radius: 10px;
 }

@@ -5,14 +5,15 @@
 }
 
 .step.slide::-webkit-scrollbar {
-    width: 12px;
-    background-color: #F5F5F5;
+    width: 8px;
+    background-color: #5d5d5d38;
+    border-radius: 10px;
 }
 
 .step.slide::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 13px rgba(0,0,0,.3);
-    background-color: #0000001A;
+    background-color: #535353;
 }
 
 #impress-container {
