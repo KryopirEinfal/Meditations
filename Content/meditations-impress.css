@@ -18,10 +18,10 @@
 
 #impress-container {
     position: relative;
-    left: 35%;
+    left: 30%;
     height: 100%;
     margin-top: 20px;
-    width: 65%;
+    width: 70%;
     margin-left: 20px;
 }
 
@@ -48,4 +48,5 @@
 
 .impress-mobile .step.slide {
     height: 700px;
+    width: 400px;
 }

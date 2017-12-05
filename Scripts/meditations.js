@@ -171,5 +171,15 @@ $(document).ready(
                 Load();
                 Meditations.Impress = impress();
                 Meditations.Impress.init();
+                if (Meditations.IsMobile) {
+                    Meditations.Impress.getConfig().width = 400;
+                    Meditations.Impress.getConfig().height = 400;
+                }
             });
+
+        Meditations.IsMobile = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
+        if (Meditations.IsMobile)
+        {
+            $("body").addClass("med-mobile");
+        }
     });

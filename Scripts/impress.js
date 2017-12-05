@@ -3653,15 +3653,18 @@
     var startX = 0;
     var lastX = 0;
     var lastDX = 0;
-    var finalThreshold = window.innerWidth / 5;
-    var thresholdAnim = window.innerWidth / 15;
-    var threshold = window.innerWidth / 10;
+    var finalThresholdFactor =  1 / 3;
+    var fastThresholdFactor  =  1 / 8;
+    var thresholdAnimFactor  =  1 / 8;
+
+    
 
     document.addEventListener( "touchstart", function( event ) {
         lastX = startX = event.touches[ 0 ].clientX;
     } );
 
-    document.addEventListener( "touchmove", function( event ) {
+    document.addEventListener("touchmove", function (event) {
+        var thresholdAnim = window.innerWidth * thresholdAnimFactor;
          var x = event.touches[ 0 ].clientX;
          var diff = x - startX;
 
@@ -3676,7 +3679,11 @@
              window.impress().swipe(sentDiff / window.innerWidth );
      } );
 
-     document.addEventListener( "touchend", function() {
+    document.addEventListener("touchend", function () {
+        var finalThreshold = window.innerWidth * finalThresholdFactor;
+        var threshold = window.innerWidth * fastThresholdFactor;
+        var thresholdAnim = window.innerWidth * thresholdAnimFactor;
+
          var totalDiff = lastX - startX;
          if (Math.abs(totalDiff) > finalThreshold && (totalDiff * lastDX) <= 0)
          {
