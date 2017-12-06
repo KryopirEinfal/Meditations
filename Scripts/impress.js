@@ -3654,7 +3654,7 @@
     var lastX = 0;
     var lastDX = 0;
     var finalThresholdFactor =  1 / 3;
-    var fastThresholdFactor  =  1 / 8;
+    var fastThresholdFactor  =  1 / 4;
     var thresholdAnimFactor  =  1 / 8;
 
     

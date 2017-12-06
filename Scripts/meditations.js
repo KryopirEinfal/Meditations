@@ -1,4 +1,5 @@
 ﻿var Meditations = Meditations || {};
+let g_Debug = false;
 
 function AllChildren(element, type, depth)
 {
@@ -61,8 +62,7 @@ function CreateHierarchy(childSelectors, root)
     return rootNode;
 }
 
-let g_Radiuses = [[0,0,0,0,0], [1200, 2700, 3000], [800, 1700], [650]];
-let g_Debug = false;
+let g_Radiuses = [[0,0,0,0], [600, 1300, 1500], [400, 700], [200]];
 
 function CreateSlides(node, center, angleDegParent, depth)
 {
@@ -103,6 +103,7 @@ function CreateSlides(node, center, angleDegParent, depth)
         let radius = g_Radiuses[child.depth][numberOfExtraLevels];
         let x = center.x + radius * Math.cos(angleRad);
         let y = center.y + radius * Math.sin(angleRad);
+        let scale = Math.pow(0.6, depth + 1);
 
         let childHtml = "";
         if (g_Debug)
@@ -112,9 +113,14 @@ function CreateSlides(node, center, angleDegParent, depth)
             childHtml += `extra-depth: ${numberOfExtraLevels}; phase: ${phaseShift};`
             childHtml += `</span >`;
         }
-        childHtml += child.header + child.content;
+        //Add overlay
+        childHtml += `<div class="med-slide-overlay"><h1>${child.text}</h1></div>\n`;
+        //Add actual content
+        childHtml += `<div class="med-slice-content">${child.header}\n${child.content}</div>`;
 
-        $("#impress").append(`<div class='step slide' data-x='${x}' data-y='${y}' data-rotate='${angleDeg}' id='${child.id}'>${childHtml}</div>`);
+        let debugClass = g_Debug ? "med-debug" : "";
+
+        $("#impress").append(`<div id='${child.id}' class='step slide ${debugClass}' data-x='${x}' data-y='${y}' data-rotate='${angleDeg}' data-scale='${scale}' >${childHtml}</div>`);
         CreateSlides(child, { "x": x, "y": y }, angleDeg, depth + 1);
     }
 }
@@ -154,7 +160,7 @@ function Load()
     $("#impress").append(`<div class='step slide' data-x='0' data-y='0' id='${root.id}'>${html}</div>`);
     CreateSlides(root, { "x": 0, "y": 0 }, 0 , 0);
 
-    $("#impress").append(`<div id="overview" class="step" data-x="0" data-y="0" data-z="0" data-scale="7"></div>`);
+    $("#impress").append(`<div id="overview" class="step" data-x="0" data-y="0" data-z="0" data-scale="3"></div>`);
 
     CreateOutline(root);
 
@@ -172,8 +178,12 @@ $(document).ready(
                 Meditations.Impress = impress();
                 Meditations.Impress.init();
                 if (Meditations.IsMobile) {
-                    Meditations.Impress.getConfig().width = 400;
-                    Meditations.Impress.getConfig().height = 400;
+                    Meditations.Impress.getConfig().width = 420;
+                    Meditations.Impress.getConfig().height = 720;
+                }
+                else {
+                    Meditations.Impress.getConfig().width = 600;
+                    Meditations.Impress.getConfig().height = 600;
                 }
             });
 

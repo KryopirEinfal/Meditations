@@ -1,6 +1,12 @@
 ﻿.step.slide {
+    overflow: visible;
+    width: 600px;
+    height: 600px;
+}
+
+.step.slide.present {
     overflow: auto;
-    width: 550px;
+    width: 600px;
     height: 600px;
 }
 
@@ -49,4 +55,30 @@
 .impress-mobile .step.slide {
     height: 700px;
     width: 400px;
+}
+
+.med-slide-overlay h1 {
+    font-size: 110px;
+}
+
+.med-slice-content {
+    display: none;
+}
+
+.present .med-slice-content {
+    display: block;
+}
+
+.present .med-slide-overlay {
+    display: none;
+}
+
+.med-slide-overlay {
+    width: 110%;
+    height: 100%;
+}
+
+.slide.med-debug {
+    border-style: solid;
+    border-color: white;
 }

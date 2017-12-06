@@ -12,12 +12,16 @@
 .med-title {
     font-family: 'Atomic Age', cursive;
     font-size: 91px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    text-align: center;
 }
 
 .med-section {
     max-width: 650px;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 auto;
 }
 
 .container-fluid h1,
