@@ -64,11 +64,41 @@ function CreateHierarchy(childSelectors, root)
 
 let g_Radiuses = [[0,0,0,0], [600, 1300, 1500], [400, 700], [200]];
 
-function CreateSlides(node, center, angleDegParent, depth)
+function CreateSlide(node, center, angleDeg, depth)
+{
+    let numberOfExtraLevels = node.leafsDepth - node.depth;
+    // radius from parent
+    let radius = g_Radiuses[node.depth][numberOfExtraLevels];
+    let scale = Math.pow(0.6, depth);
+
+    let phaseShift = numberOfExtraLevels * node.depth * 45;
+
+    let html = "";
+    if (g_Debug) {
+        html += `<span>`;
+        html += `Parent: '${node.parent.text}'; Depth: ${node.depth} ; Radius: ${radius}; `
+        html += `extra-depth: ${numberOfExtraLevels}; phase: ${phaseShift};`
+        html += `</span >`;
+    }
+    //Add overlay
+    html += `<div class="med-slide-overlay"><h1>${node.text}</h1></div>\n`;
+    //Add actual content
+    html += `<div class="med-slice-content">${node.header}\n${node.content}</div>`;
+
+    let debugClass = g_Debug ? "med-debug" : "";
+
+    $("#impress").append(`<div id='${node.id}' class='step slide ${debugClass}' data-x='${center.x}' data-y='${center.y}' data-rotate='${angleDeg}' data-scale='${scale}' >${html}</div>`);
+
+}
+
+function CreateSlides(node, center, angleDeg, depth)
 {
     let children = node.children;
 
     let leafDepthToCountMap = {};
+    if (depth != 0) {
+        CreateSlide(node, center, angleDeg, depth);
+    }
 
     for (let i = 0; i < children.length; ++i)
     {
@@ -97,31 +127,13 @@ function CreateSlides(node, center, angleDegParent, depth)
         let numberOfExtraLevels = child.leafsDepth - child.depth;
         let phaseShift = numberOfExtraLevels * child.depth * 45;
 
-
-        let angleDeg = (realIndex / childCount) * 360 + angleDegParent + phaseShift;
-        let angleRad = angleDeg * Math.PI / 180;
+        let angleDegChild = (realIndex / childCount) * 360 + angleDeg + phaseShift;
+        let angleRad = angleDegChild * Math.PI / 180;
         let radius = g_Radiuses[child.depth][numberOfExtraLevels];
         let x = center.x + radius * Math.cos(angleRad);
         let y = center.y + radius * Math.sin(angleRad);
-        let scale = Math.pow(0.6, depth + 1);
 
-        let childHtml = "";
-        if (g_Debug)
-        {
-            childHtml += `<span>`;
-            childHtml += `Parent: '${child.parent.text}'; Depth: ${child.depth} ; Radius: ${radius}; `
-            childHtml += `extra-depth: ${numberOfExtraLevels}; phase: ${phaseShift};`
-            childHtml += `</span >`;
-        }
-        //Add overlay
-        childHtml += `<div class="med-slide-overlay"><h1>${child.text}</h1></div>\n`;
-        //Add actual content
-        childHtml += `<div class="med-slice-content">${child.header}\n${child.content}</div>`;
-
-        let debugClass = g_Debug ? "med-debug" : "";
-
-        $("#impress").append(`<div id='${child.id}' class='step slide ${debugClass}' data-x='${x}' data-y='${y}' data-rotate='${angleDeg}' data-scale='${scale}' >${childHtml}</div>`);
-        CreateSlides(child, { "x": x, "y": y }, angleDeg, depth + 1);
+        CreateSlides(child, { "x": x, "y": y }, angleDegChild, depth + 1);
     }
 }
 

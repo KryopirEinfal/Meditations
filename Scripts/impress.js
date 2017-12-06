@@ -121,8 +121,8 @@
     // `computeWindowScale` counts the scale factor between window size and size
     // defined for the presentation in the config.
     var computeWindowScale = function( config ) {
-        var hScale = $("#impress-container")[0].clientHeight / config.height,
-            wScale = $("#impress-container")[0].clientWidth / config.width,
+        var hScale = $("#impress")[0].clientHeight / config.height,
+            wScale = $("#impress")[0].clientWidth / config.width,
             scale = hScale > wScale ? wScale : hScale;
 
         if ( config.maxScale && scale > config.maxScale ) {

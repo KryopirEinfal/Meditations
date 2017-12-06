@@ -1,4 +1,10 @@
-﻿.step.slide {
+﻿.all-container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.step.slide {
     overflow: visible;
     width: 600px;
     height: 600px;
@@ -26,9 +32,18 @@
     position: relative;
     left: 30%;
     height: 100%;
-    margin-top: 20px;
     width: 70%;
-    margin-left: 20px;
+    padding: 20px;
+}
+
+#impress {
+    height: 95%;
+    width: 95%;
+}
+
+#impress > div {
+    left: 0;
+    top: 0;
 }
 
 @media (max-width: 600px) {
@@ -42,11 +57,7 @@
     }
 }
 
-.all-container {
-    width: 96vw;
-    height: 96vh;
-    margin: 0;
-}
+
 
 .impress-mobile #impress-container {
     margin: 0;
