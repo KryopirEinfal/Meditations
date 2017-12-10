@@ -195,3 +195,15 @@ body::-webkit-scrollbar-thumb {
         float: left;
     }
 }
+
+
+
+.center-horizontal {
+    margin: 0 auto;
+}
+
+.center-vertical {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}

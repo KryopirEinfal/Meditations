@@ -68,9 +68,6 @@
     width: 400px;
 }
 
-.med-slide-overlay h1 {
-    font-size: 110px;
-}
 
 .med-slice-content {
     display: none;
@@ -80,15 +77,24 @@
     display: block;
 }
 
+.med-slide-overlay h1 {
+    font-size: 110px;
+}
+
+.med-slide-overlay img {
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
+}
+
 .present .med-slide-overlay {
     display: none;
 }
 
 .med-slide-overlay {
-    width: 110%;
+    width: 100%;
     height: 100%;
 }
-
 .slide.med-debug {
     border-style: solid;
     border-color: white;
