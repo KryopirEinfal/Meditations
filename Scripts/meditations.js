@@ -137,7 +137,7 @@ function CreateSlide(node, center, angleDeg, depth, numberOfSiblings)
         + (addImg ? `<img src="${node.img}" class="center-horizontal"/>` : "")
         + `</div>\n`;
     //Add actual content
-    html += `<div class="med-slice-content">${node.header}\n${node.content}</div>`;
+    html += `<div class="med-slice-content container-fluid">${node.header}\n${node.content}</div>`;
 
     let debugClass = g_Debug ? "med-debug" : "";
 
@@ -221,15 +221,19 @@ function FixOverlayImageSize(nodeId) {
     let img = $(`#med-slide-overlay-${nodeId} img`);
     let imgWidth = img.width();
     let imgHeight = img.height();
-    if (imgWidth >= imgHeight) {
-        img.width(Meditations.SlideWidth);
+    let avWidth = Meditations.SlideWidth;
+    let avHeight = Meditations.SlideHeight - $(`#med-slide-overlay-${nodeId} h1`).height();
+
+    let avRatio = avHeight / avWidth;
+    let imgRatio = imgHeight / imgWidth;
+
+    if (imgRatio > avRatio) {
+        img.height(avHeight);
     }
     else {
-        let titleHeight = $(`#med-slide-overlay-${nodeId} h1`).height();
-        img.height(Meditations.SlideHeight - titleHeight);
+        img.width(avWidth);
     }
 }
-
 
 
 function CalculateRadius(parentDepth, childCount, childExtraDepth) {
