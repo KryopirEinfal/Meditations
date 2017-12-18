@@ -28,8 +28,10 @@ h1, h2, h3 {
     font-family: 'Atomic Age', cursive;
 }
 
-.container-fluid p {
-    font-family: 'Source Code Pro', monospace;
+.container-fluid p,
+.container-fluid li {
+    /*font-family: 'Source Code Pro', monospace;*/
+    font-family: 'Philosopher', monospace;
 }
 
 .container-fluid {

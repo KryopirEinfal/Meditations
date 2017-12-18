@@ -124,13 +124,13 @@ function CreateSlide(node, center, angleDeg, depth, numberOfSiblings)
 
     let html = "";
     if (g_Debug) {
-        let parentText = node.parent != null ? node.parent.text : "I ARE ROOT";
+        let parentText = node.parent !== null ? node.parent.text : "I ARE ROOT";
         html += `<span>`;
         html += `Parent: '${parentText}'; Depth: ${node.depth} ; Radius: ${radius}; `
         html += `extra-depth: ${numberOfExtraDepth}; phase: ${phaseShift};`
         html += `</span >`;
     }
-    let addImg = node.img != null;
+    let addImg = node.img !== null;
     //Add overlay
     html += `<div id="med-slide-overlay-${node.id}" class="med-slide-overlay">`
         + `<h1 class="center-horizontal">${node.text}</h1>`
@@ -260,7 +260,7 @@ function CalculateRadius(parentDepth, childCount, childExtraDepth) {
     // The height is our L
     // the position is actually at the center of the slide
     // so we translate by w/2
-    if (childExtraDepth == 0)
+    if (childExtraDepth === 0)
         radius = h / 2 * Math.tan(Math.PI / 2 * (1 - 2 / childCount)) + w / 2;
     //Can't let radius be any less than the parent's own size 
     // otherwise we overlap
